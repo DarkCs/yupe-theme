@@ -1,0 +1,40 @@
+$block = '.toolbar-button'
+
+toolbar-icon(icon)
+    margin-left 25px
+    &::before
+        width 25px
+        height 20px
+        top calc(50% - 8px);
+        left -20px
+        position: absolute;
+
+        content ''
+        background url(../images/icon.png) no-repeat
+
+{$block}
+    position relative
+    padding-left 10px
+    padding-right 10px
+
+    display inline-block
+
+    color #fff
+
+    &:hover
+    &_active
+        color $active-link-color
+        cursor pointer
+
+    &_compare
+        toolbar-icon(icon-compare)
+    &_favorite
+        toolbar-icon(icon-heart)
+        &::before
+            left -18px
+
+    &__icon
+    &__label
+        display inline-block
+
+

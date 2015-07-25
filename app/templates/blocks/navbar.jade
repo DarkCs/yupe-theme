@@ -1,0 +1,24 @@
+.navbar
+    .navbar__wrapper.grid
+        .navbar__menu
+            ul.top-menu
+                li.top-menu__item.top-menu__item_active
+                    a.top-menu__link(href=jv0) Главная
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) О компании
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) Доставка
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) Оплата
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) Новости
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) Бренды
+                li.top-menu__item
+                    a.top-menu__link(href=jv0) Контакты
+        .navbar__personal
+            .navbar__toolbar
+                +toolbarButton('Избранное', 33).toolbar-button_favorite
+                +toolbarButton('Сравнение', 2).toolbar-button_compare
+            .navbar__user
+                a.login-button(href=jv0) Войти

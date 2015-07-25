@@ -1,0 +1,20 @@
+extends ../layouts/page
+
+block head
+    - pageTitle = 'Блоки'
+
+block page_content
+
+    .grid
+        a(href='/') Радар
+
+    .demo-blocks
+        #navbar(data-collapse='persist')
+            .grid
+                .h3 Меню
+            .demo-block
+                include ../blocks/navbar
+
+block scriptsAfter
+    script(src='/assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
+    script(src='/assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')

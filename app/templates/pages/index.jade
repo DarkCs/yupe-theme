@@ -1,7 +1,16 @@
-extends ../layouts/default
-
-block head
-	- pageTitle = 'CSSSR Project Template';
+extends ../layouts/radar
 
 block content
-	include ../blocks/main
+    table.radar
+        tr
+            th(colspan='2') Технические
+        tr
+            td.red
+            td
+                a(href='_blocks.html') Blocks
+        tr
+            th(colspan='2') Страницы
+        tr
+            td.red
+            td
+                a(href='home.html') Главная

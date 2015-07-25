@@ -1,0 +1,46 @@
+$columns = 12
+
+gridWidth(cells)
+    (cells * ($module-width + $module-gap) - $module-gap)
+
+.grid
+    width 100%
+    max-width gridWidth($columns)
+    margin-left auto
+    margin-right auto
+    padding 0 10px
+    box-sizing content-box
+
+for $i in 1..12
+    .grid-module-{$i}
+        width gridWidth($i)
+
+.cols
+    display table
+    margin-left -($module-gap)
+
+.col
+    display table-cell
+    box-sizing content-box
+    padding-left $module-gap
+    vertical-align top
+
+.demo-blocks
+    padding-bottom 50px
+
+.demo-block
+    display none
+    margin 1em 0 2em
+    padding 1.5em 0
+    background-image url('data:image/gif;base64,R0lGODlhEAAQAJEAAMvLy8zMzP///wAAACH5BAAAAAAALAAAAAAQABAAAAIglG+hq4jM3IFLJhqswNly/XkUEEqlcz4YuIoU+7qQVgAAOw==')
+
+.demo-block_dark
+    background-image url('data:image/gif;base64,R0lGODlhEAAQAIAAAJmZmWZmZiH5BAAAAAAALAAAAAAQABAAAAIfhG+hq4jM3IFLJhoswNly/XkcBpIiVaInlLJr9FZWAQA7');
+
+.demo-block_white
+    background-image none
+    background-color #fff
+
+.demo-block_gray
+    background-image none
+    background-color $rushina-light-gray

@@ -1,6 +1,6 @@
-gulp    = require 'gulp'
+gulp = require 'gulp'
 ghpages = require 'gulp-gh-pages'
 
 gulp.task 'ghpages', ->
-	gulp.src 'dist/**/*'
-		.pipe ghpages branch: 'dist'
+  gulp.src 'dist/**/*'
+  .pipe ghpages branch: 'dist'

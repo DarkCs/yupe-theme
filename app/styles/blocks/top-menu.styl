@@ -1,0 +1,22 @@
+$block = '.top-menu'
+
+{$block}
+    height 100%
+    display inline-block
+
+    &__link
+        display inline-block
+
+        text-transform: uppercase
+
+    &__item
+        padding-left 10px
+        padding-right 10px
+
+        display inline-block
+        height 100%
+
+        &:hover
+        &_active
+            color $active-link-color
+            cursor pointer

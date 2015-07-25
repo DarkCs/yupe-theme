@@ -1,0 +1,27 @@
+$block = '.navbar'
+
+{$block}
+    background-color: $navbar-background
+
+{$block}
+    height $navbar-height
+
+    line-height $navbar-height
+    &__wrapper
+        height 100%
+
+    &__menu
+        float left
+
+        height 100%
+
+        color #fff
+
+    &__personal
+        float right
+    &__toolbar
+        display inline-block
+    &__user
+        display inline-block
+
+    clearfix()
