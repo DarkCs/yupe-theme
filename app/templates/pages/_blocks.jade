@@ -30,6 +30,12 @@ block page_content
             .demo-block.demo.demo-block_gray
                 include ../blocks/header
 
+        #header(data-collapse='persist')
+            .grid
+                .h3 Строка поиска
+            .demo-block
+                include ../blocks/search-bar
+
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')

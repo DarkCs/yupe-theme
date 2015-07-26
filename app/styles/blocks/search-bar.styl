@@ -1,0 +1,31 @@
+.search-bar
+    &__wrapper
+        height 60px
+
+        background-color $active-link-color
+    &__catalog-button
+        display block
+        float left
+        width 180px
+
+        line-height 60px
+        text-align center
+
+        background-color inherit
+        color #fff
+
+        &:hover
+            background-color #000
+    &__input
+        padding-left 40px
+        padding-right 10px
+
+        width calc(100% - 180px)
+        height 60px
+        float right
+
+        border 3px solid $active-link-color
+        box-sizing border-box
+        background #fff url('../images/icon-search.png') no-repeat 10px center
+
+    clearfix()
