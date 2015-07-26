@@ -1,0 +1,63 @@
+.menu-catalog
+    position absolute
+    display none
+    width 300px
+
+    color #fff
+    background-color #2e2e2e
+    box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+
+    &.toggle-active
+    &_active
+        display block
+
+    // первый уровень
+    > ul
+        > li
+            &:hover
+                background-color $active-link-color !important
+
+                >.menu-catalog-submenu
+                    display block
+
+            > a
+                padding 7px 20px 7px 20px
+
+                display block
+
+                cursor pointer
+            &.has-submenu
+                background url('../images/menu-catalog_arrow_right.svg') no-repeat 280px center
+            >.menu-catalog-submenu
+                position absolute
+                top 0
+                left 100%
+
+                padding 10px
+
+                display none
+                width 880px
+                min-height 100%
+
+                color #000
+                background #fff
+                box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+
+                > ul
+                    vertical-align top
+
+                    padding 0 10px
+
+                    display inline-block
+
+                    > li
+                        padding-bottom 15px
+
+                        font-weight bold
+
+                        > ul
+                            padding-top 5px
+
+                            color #888
+                            font-weight normal
+
