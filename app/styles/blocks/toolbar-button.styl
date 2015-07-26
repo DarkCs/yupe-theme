@@ -1,16 +1,8 @@
 $block = '.toolbar-button'
 
-toolbar-icon(icon)
-    margin-left 25px
-    &::before
-        width 25px
-        height 20px
-        top calc(50% - 8px);
-        left -20px
-        position: absolute;
-
-        content ''
-        background url(../images/icon.png) no-repeat
+toolbar-icon($icon)
+    padding-left 26px
+    background url(../images/$icon.png) no-repeat 0 center
 
 {$block}
     position relative
@@ -30,11 +22,8 @@ toolbar-icon(icon)
         toolbar-icon(icon-compare)
     &_favorite
         toolbar-icon(icon-heart)
-        &::before
-            left -18px
+        padding-left 23px
 
     &__icon
     &__label
         display inline-block
-
-
