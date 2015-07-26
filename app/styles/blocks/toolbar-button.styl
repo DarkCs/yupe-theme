@@ -1,8 +1,8 @@
 $block = '.toolbar-button'
 
 toolbar-icon($icon)
-    padding-left 26px
-    background url(../images/$icon.png) no-repeat 0 center
+    padding-left 36px
+    background url(../images/$icon.png) no-repeat 10px center
 
 {$block}
     position relative
@@ -18,12 +18,30 @@ toolbar-icon($icon)
         color $active-link-color
         cursor pointer
 
-    &_compare
-        toolbar-icon(icon-compare)
-    &_favorite
-        toolbar-icon(icon-heart)
-        padding-left 23px
-
-    &__icon
     &__label
         display inline-block
+        line-height initial
+
+    &_icon_compare
+        toolbar-icon(icon-compare)
+    &_icon_favorite
+        toolbar-icon(icon-heart)
+        padding-left 33px
+    &_icon_user
+        toolbar-icon(icon-user)
+
+    &_dropdown
+        padding-right 20px
+        &:after
+            position absolute
+            padding-left 6px
+            width 12px
+            height 12px
+            top calc(50% - 5px)
+            
+            background url(../images/dropdown-arrow_bottom.png) no-repeat center
+            content ''
+
+        &:hover
+            > .dropdown-menu
+                display block

@@ -1,0 +1,12 @@
+mixin dropdown-menu($active)
+    .dropdown-menu(class = $active ? 'dropdown-menu_active' : '')
+        .dropdown-menu__header Иванов Василий
+        .dropdown-menu__item
+            .dropdown-menu__link Мои заказы
+        .dropdown-menu__item
+            .dropdown-menu__link Мои настройки
+        .dropdown-menu__item
+            .dropdown-menu__link Обратная связь
+        .dropdown-menu__separator
+        .dropdown-menu__item
+            .dropdown-menu__link.dropdown-menu__link_exit Выход

@@ -9,11 +9,21 @@ block page_content
         a(href='index.html') Радар
 
     .demo-blocks
+
         #navbar(data-collapse='persist')
             .grid
-                .h3 Меню
+                .h3 Меню гостя
             .demo-block
+                - var is_guest = true
                 include ../blocks/navbar
+
+        #navbar(data-collapse='persist')
+            .grid
+                .h3 Меню пользователя
+            .demo-block
+                - var is_guest = false
+                include ../blocks/navbar
+
 
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
