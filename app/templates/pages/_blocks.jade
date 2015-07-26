@@ -17,13 +17,18 @@ block page_content
                 - var is_guest = true
                 include ../blocks/navbar
 
-        #navbar(data-collapse='persist')
+        #navbar-user(data-collapse='persist')
             .grid
                 .h3 Меню пользователя
             .demo-block
                 - var is_guest = false
                 include ../blocks/navbar
 
+        #header(data-collapse='persist')
+            .grid
+                .h3 Хедер
+            .demo-block.demo.demo-block_gray
+                include ../blocks/header
 
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')

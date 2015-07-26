@@ -1,0 +1,90 @@
+.header
+    position relative
+    height 140px
+
+    &__item
+        display block
+        float left
+
+    &__logo-link
+        display block
+
+    &-logo
+        margin-top 30px
+
+    &-logo-image
+        vertical-align middle
+
+    &-description
+        margin-left 36px
+        width 350px
+
+        color #b8b8b8
+
+        line-height 140px
+
+    &__phone
+        margin-top 55px
+
+        color #000
+
+        font-size 22px
+        font-weight bold
+
+    &-phone-callback
+        display inline-block
+        padding-top 5px
+
+        color $active-link-color
+
+        text-decoration none
+        border-bottom 1px dashed $active-link-color
+
+    &-cart
+        margin-top 50px
+
+        float right
+
+        &__icon
+            margin-top 4px
+
+            float left
+            width 50px
+            height 40px
+            display block
+
+            background url('../images/icon-cart.png') no-repeat
+
+            > .badge
+                margin-top -5px
+
+                float right
+        &__text-wrap
+            margin-left 10px
+
+            float right
+
+            text-align right
+
+        &__label
+            font-size 18px
+            font-weight bold
+
+            color #000
+        &__cost
+            //
+        &__cost-title
+            padding-right 4px
+
+            display: inline-block
+
+            color #b8b8b8
+
+        &__cost-price
+            display inline-block
+
+            color #555
+
+            font-weight bold
+    clearfix()
+
