@@ -1,8 +1,12 @@
 $block = '.top-menu'
 
 {$block}
+    position relative
+
     height 100%
     display inline-block
+
+    font-size 12px
 
     &__link
         display inline-block
@@ -10,12 +14,31 @@ $block = '.top-menu'
         text-transform: uppercase
 
     &__item
+        position relative
         padding-left 10px
         padding-right 10px
 
         display inline-block
         height 100%
 
+        &:first-child
+            padding-left 0
+
+        &:after
+            position absolute
+            top 50%
+            left 100%
+
+            margin-top -5px
+
+            display block
+            height 10px
+
+            border-right 1px solid #444
+
+            content ''
+        &:last-child:after
+            display none
         &:hover
         &_active
             color $active-link-color
