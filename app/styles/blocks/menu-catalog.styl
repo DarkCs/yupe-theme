@@ -2,6 +2,7 @@
     position absolute
     display none
     width 300px
+    z-index 100
 
     color #fff
     background-color #2e2e2e
@@ -17,7 +18,7 @@
             &:hover
                 background-color $active-link-color !important
 
-                >.menu-catalog-submenu
+                > .menu-catalog-submenu
                     display block
 
             > a
@@ -28,7 +29,7 @@
                 cursor pointer
             &.has-submenu
                 background url('../images/menu-catalog_arrow_right.svg') no-repeat 280px center
-            >.menu-catalog-submenu
+            > .menu-catalog-submenu
                 position absolute
                 top 0
                 left 100%
