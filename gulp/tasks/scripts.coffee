@@ -11,7 +11,8 @@ gulp.task 'scripts', ->
   gulp.src [
     'components/jquery/dist/jquery.min.js'
     'components/svg4everybody/svg4everybody.min.js'
-    'app/scripts/views/toggle.js'
+    'components/slick/slick/slick.min.js'
+    'app/scripts/views/**/*.js'
     'app/scripts/common.js'
   ]
   .pipe plumber errorHandler: errorHandler

@@ -1,0 +1,30 @@
+.promo-slider
+
+    .slick
+        &__dot
+            position absolute
+            bottom 40px
+            left calc(50% - 100px)
+
+            width 200px
+
+            text-align center
+
+            > li
+                margin 7px
+
+                display inline-block
+                width 14px
+                height @width
+
+                border 3px solid #ddd
+
+                button
+                    display none
+
+                &.slick-active
+                    border-color $active-link-color
+                    background-color $active-link-color
+                &:hover
+                    border-color $active-link-color
+                    cursor pointer

@@ -43,6 +43,13 @@ block page_content
                 .grid
                     +menu-catalog(true)(style='position: relative;')
 
+        #promo-slider(data-collapse='persist')
+            .grid
+                .h3 Главный слайдер
+            .demo-block
+                .grid
+                    include ../blocks/promo-slider
+
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')
