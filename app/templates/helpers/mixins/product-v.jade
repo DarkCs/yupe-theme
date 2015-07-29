@@ -1,0 +1,47 @@
+include product-label
+
+mixin product-v($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/180x200'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || 12304
+    - $data.rating = $data.rating || 4.5
+    - if(typeof($data.in_stock) === 'undefined'){ $data.in_stock = true }
+
+    article.product-vertical&attributes(attributes)
+        .product-vertical__label
+            if $data.oldPrice || $data.is_discount
+                +product-label('%', {theme: 'discount'})
+            else if $data.is_hit
+                +product-label('Хит', {theme: 'hit'})
+            else if $data.is_new
+                +product-label('New', {theme: 'new'})
+
+        .product-vertical__thumbnail
+            img(src=$data.thumbnail).product-vertical__img
+        .product-vertical__content
+            a(href=jv0).product-vertical__title= $data.title
+
+            .product-vertical__price
+                .product-vertical-price
+                    = $data.price
+                    +ruble()
+                if $data.oldPrice
+                    .product-vertical-price.product-vertical-price_old
+                        = $data.oldPrice
+                        +ruble()
+        .product-vertical__extra
+            .product-vertical-extra
+                .product-vertical-extra__top
+                    .product-vertical-extra__rating= $data.rating
+                    .product-vertical-extra__reviews
+                        a(href=jv0) 6 отзывов
+                    .product-vertical-extra__stock
+                        if $data.in_stock
+                            .in-stock В наличии
+                        else
+                            |Нет в наличии
+                .product-vertical-extra__toolbar
+                    .product-vertical-extra__favorite
+                    .product-vertical-extra__compare
+                    a(href=jv0).product-vertical-extra__cart В корзину

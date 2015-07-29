@@ -1,0 +1,184 @@
+$b = '.product-vertical'
+
+{$b}
+    position relative
+
+    background #f8f8f8
+    background-clip padding-box
+    border 3px solid rgba(0, 0, 0, 0)
+
+    text-align center
+
+    &__label
+        position absolute
+        top 13px
+        right 13px
+
+        z-index 1
+
+    &__thumbnail
+        position relative
+
+        display block
+        overflow hidden
+        width 100%
+        height 308px
+
+        background #fff
+
+    &__img
+        position absolute
+        top 50%
+        left 50%
+
+        transform translate(-50%, -50%)
+
+    &__content
+        padding 15px
+        min-height 110px
+
+    &__title
+        display block
+        padding-bottom 10px
+
+        color $active-link-color
+
+        font-size 15px
+        text-decoration underline
+
+        &:hover
+            text-decoration none
+
+    &_hover
+    &:hover
+        border 3px solid $active-link-color
+
+        {$b}__extra
+            display block
+
+    &__price
+        position absolute
+        bottom 20px
+        left 50%
+        transform translateX(-50%)
+
+        white-space nowrap
+
+    &__extra
+        position absolute
+        top 100%
+        left -3px
+        right -3px
+
+        display none
+        border 3px solid $active-link-color
+        border-top none
+
+        background inherit
+
+product-vertical-extra-toolbar-button()
+    margin-right 4px
+
+    display inline-block
+    width 41px
+    height 41px
+
+    border 1px solid #cbcbcb
+
+    cursor pointer
+
+.product-vertical-extra
+    font-size 13px
+    text-align left
+
+    &__top
+        margin 0 15px 0 15px
+        padding 14px 0
+
+        border-top 1px solid #dbdbdb
+
+
+    &__rating
+        margin-right 10px
+
+        display inline-block
+
+        color $light-green
+
+    &__reviews
+        display inline-block
+        text-decoration underline
+        &:hover
+            color $active-link-color
+
+    &__stock
+        float right
+
+        display inline-block
+
+    &__toolbar
+        padding 10px 12px 4px
+
+        background #e7e7e7
+
+    &__favorite
+        product-vertical-extra-toolbar-button()
+
+        background url(../images/icon-heart.png) no-repeat center center
+
+    &__compare
+        product-vertical-extra-toolbar-button()
+
+        background url(../images/icon-compare.png) no-repeat center center
+
+    &__cart
+        float right
+
+        padding-left 50px
+
+        width 136px
+        height 41px
+
+        line-height @height
+
+        color #fff
+        background $active-link-color url(../images/icon-cart_white.png) no-repeat 20px center
+
+        cursor pointer
+
+        &:hover
+            background-color lighten($active-link-color, 5)
+
+
+.product-vertical-price
+    vertical-align middle
+
+    display inline-block
+    padding-left .15em
+    padding-right .15em
+
+    color black
+
+    font-size 19px
+    font-weight 700
+    line-height 1
+
+    &_old
+        position relative
+        vertical-align top
+
+        color #e4003a
+        font-size 13px
+        font-weight 400
+
+        &:after
+            position absolute
+            left 0
+            right 0
+            top 50%
+            display block
+            width 100%
+            height 1px
+            margin-top -1px
+            background #e4003a
+            content ''

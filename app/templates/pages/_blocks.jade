@@ -50,6 +50,46 @@ block page_content
                 .grid
                     include ../blocks/promo-slider
 
+        #product-vertical(data-collapse='persist')
+            .grid
+                .h3 Вертикальная карточка товара
+            .demo-block
+                .grid
+                    .cols
+                        .col.grid-module-3
+                            include ../helpers/mixins/product-v
+                            +product-v({
+                                thumbnail: 'assets/images/content/product-vertical/1.png',
+                                title: 'Смартфон Sony Xperia V (LT25i Black)',
+                                price: '12 990',
+                                oldPrice: '15 990'
+                            })
+                        .col.grid-module-3
+                            include ../helpers/mixins/product-v
+                            +product-v({
+                                thumbnail: 'assets/images/content/product-vertical/2.png',
+                                title: 'Samsung Galaxy Alpha SM-G850F',
+                                price: '23 700',
+                                is_hit: true
+                            }).product-vertical_hover
+                        .col.grid-module-3
+                            include ../helpers/mixins/product-v
+                            +product-v({
+                                thumbnail: 'assets/images/content/product-vertical/3.png',
+                                title: 'Transcend TS*USDHC10',
+                                price: '1 234',
+                                is_new: true,
+                                in_stock: false
+                            })
+                        .col.grid-module-3
+                            include ../helpers/mixins/product-v
+                            +product-v({
+                                thumbnail: 'assets/images/content/product-vertical/4.png',
+                                title: 'Робот-пылесос iClebo Arte',
+                                price: '24 500'
+                            })
+
+
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')
