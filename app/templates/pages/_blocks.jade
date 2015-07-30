@@ -88,18 +88,27 @@ block page_content
                                 title: 'Робот-пылесос iClebo Arte',
                                 price: '24 500'
                             })
+
         #hit-slider(data-collapse='persist')
             .grid
                 .h3 Слайдер хитов
             .demo-block.demo-block_gray
                 .grid
                     include ../blocks/hit-slider
+
         #new-slider(data-collapse='persist')
             .grid
                 .h3 Слайдер новинок
             .demo-block.demo-block_gray
                 .grid
                     include ../blocks/new-slider
+
+        #recently(data-collapse='persist')
+            .grid
+                .h3 Недавно просмотренные
+            .demo-block.demo-block_white
+                .grid
+                    include ../blocks/recently-viewed-slider
 
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')

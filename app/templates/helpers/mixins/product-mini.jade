@@ -1,0 +1,16 @@
+mixin product-mini($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/50x50'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || 12304
+
+    .product-mini
+        .product-mini__thumbnail
+            a(href=jv0)
+                img(src=$data.thumbnail).product-mini__img
+        .product-mini__info
+            .product-mini__title
+                a(href=jv0).product-mini__link= $data.title
+            .product-mini__price
+                +product-price($data.price, $data.oldPrice)
+

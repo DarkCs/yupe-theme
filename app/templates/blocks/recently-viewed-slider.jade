@@ -1,0 +1,14 @@
+include  ../helpers/mixins/product-mini
+
+.h3 Вы недавно смотрели
++h-slider({
+    show: 3,
+    scroll: 1,
+    infinite: true,
+    noclip_buttons: true
+})
+    each i in Array(5)
+        .h-slider__slide
+            .grid-module-4
+                +product-mini({thumbnail: 'assets/images/content/product-small-1.jpg'})
+

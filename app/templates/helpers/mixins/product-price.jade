@@ -1,0 +1,8 @@
+mixin product-price($price, $old)
+    .product-vertical-price
+        = $price
+        +ruble()
+    if $old
+        .product-vertical-price.product-vertical-price_old
+            = $old
+            +ruble()

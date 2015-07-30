@@ -1,4 +1,5 @@
 include product-label
+include product-price
 
 mixin product-v($data)
     - $data = $data || {}
@@ -23,13 +24,7 @@ mixin product-v($data)
             a(href=jv0).product-vertical__title= $data.title
 
             .product-vertical__price
-                .product-vertical-price
-                    = $data.price
-                    +ruble()
-                if $data.oldPrice
-                    .product-vertical-price.product-vertical-price_old
-                        = $data.oldPrice
-                        +ruble()
+                +product-price($data.price, $data.oldPrice)
         .product-vertical__extra
             .product-vertical-extra
                 .product-vertical-extra__top
