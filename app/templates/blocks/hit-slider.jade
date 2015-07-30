@@ -1,0 +1,19 @@
+.hit-slider.js-overlay-items
+    .hit-slider__title
+        .h2.h_upcase Хиты
+    .hit-slider__body
+        +h-slider({
+            show: 4,
+            scroll: 1,
+            infinite: true,
+            noclip_buttons: true
+        })
+            each i in Array(5)
+                .h-slider__slide.js-overlay-item
+                    .grid-module-3
+                        +product-v({
+                            thumbnail: 'assets/images/content/product-vertical/1.png',
+                            title: 'Смартфон Sony Xperia V (LT25i Black)',
+                            price: '12 990',
+                            oldPrice: '15 990'
+                        })

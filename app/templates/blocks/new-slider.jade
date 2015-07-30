@@ -1,0 +1,19 @@
+.new-slider.js-overlay-items
+    .new-slider__title
+        .h2.h_upcase Новинки
+    .new-slider__body
+        +h-slider({
+            show: 4,
+            scroll: 1,
+            infinite: true,
+            noclip_buttons: true
+        })
+            each i in Array(5)
+                .h-slider__slide.js-overlay-item
+                    .grid-module-3
+                        +product-v({
+                            thumbnail: 'assets/images/content/product-vertical/2.png',
+                            title: 'Samsung Galaxy Alpha SM-G850F',
+                            price: '23 700',
+                            is_hit: true
+                        })

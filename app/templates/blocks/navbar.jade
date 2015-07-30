@@ -22,7 +22,7 @@
                 +toolbarButton('Сравнение', 2).toolbar-button_icon_compare
             .navbar__user
                 if is_guest
-                    a.login-button(href=jv0) Войти
+                    a.btn.btn_login-button(href=jv0) Войти
                 else
                     +toolbarButton('Личный кабинет').toolbar-button_icon_user.toolbar-button_dropdown
                         +dropdown-menu()
