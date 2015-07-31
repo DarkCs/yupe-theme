@@ -34,7 +34,8 @@ block page_content
             .grid
                 .h3 Строка поиска
             .demo-block
-                include ../blocks/search-bar
+                .grid
+                    include ../blocks/search-bar
 
         #menu-catalog-block(data-collapse='persist')
             .grid
@@ -57,7 +58,6 @@ block page_content
                 .grid
                     .cols
                         .col.grid-module-3
-                            include ../helpers/mixins/product-v
                             +product-v({
                                 thumbnail: 'assets/images/content/product-vertical/1.png',
                                 title: 'Смартфон Sony Xperia V (LT25i Black)',
@@ -65,7 +65,6 @@ block page_content
                                 oldPrice: '15 990'
                             })
                         .col.grid-module-3
-                            include ../helpers/mixins/product-v
                             +product-v({
                                 thumbnail: 'assets/images/content/product-vertical/2.png',
                                 title: 'Samsung Galaxy Alpha SM-G850F',
@@ -73,7 +72,6 @@ block page_content
                                 is_hit: true
                             }).product-vertical_hover
                         .col.grid-module-3
-                            include ../helpers/mixins/product-v
                             +product-v({
                                 thumbnail: 'assets/images/content/product-vertical/3.png',
                                 title: 'Transcend TS*USDHC10',
@@ -82,7 +80,6 @@ block page_content
                                 in_stock: false
                             })
                         .col.grid-module-3
-                            include ../helpers/mixins/product-v
                             +product-v({
                                 thumbnail: 'assets/images/content/product-vertical/4.png',
                                 title: 'Робот-пылесос iClebo Arte',
@@ -121,7 +118,7 @@ block page_content
             .grid
                 .h3 Футер
             .demo-block
-                 include ../blocks/footer
+                include ../blocks/footer
 
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')

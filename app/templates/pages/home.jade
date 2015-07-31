@@ -1,0 +1,20 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Главная';
+
+
+block content
+    .main__search.grid
+        include ../blocks/search-bar
+    .main__promo-slider.grid
+        include ../blocks/promo-slider
+    .main__hit-slider.grid
+        include ../blocks/hit-slider
+    .main__new-slider.grid
+        include ../blocks/new-slider
+    .main__recently-viewed-slider
+        .grid
+            include ../blocks/recently-viewed-slider
+    .main__best-brands.grid
+        include ../blocks/best-brands

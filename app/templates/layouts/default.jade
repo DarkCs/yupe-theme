@@ -5,11 +5,15 @@ include ../helpers/mixins
 
 doctype html
 html(lang='ru')
-    include ../blocks/head
+    include ../partials/head
     body
         .main
-            include ../blocks/header
+            .main__navbar
+                include ../blocks/navbar
+            .main__header
+                include ../blocks/header
             block content
-            include ../blocks/footer
+            .main__footer
+                include ../blocks/footer
 
         include ../blocks/scripts
