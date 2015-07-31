@@ -1,0 +1,8 @@
+.best-brands
+    .best-brands__title
+        .h3.h_upcase Товары таких брендов
+    .best-brands__body
+        .grid
+            each $img in ['apple','braun','lg','panasonic','philips','samsung','sharp','toshiba']
+                .best-brands__item.grid-module-2
+                    img(src= 'assets/images/content/brands/' + $img + '.png').best-brands__img
