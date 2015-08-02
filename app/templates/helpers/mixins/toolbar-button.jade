@@ -1,5 +1,5 @@
 mixin toolbarButton($label, $count)
     a(href=jv0).toolbar-button&attributes(attributes)
-        span.toolbar-button__label= $label
+        span.toolbar-button__label!= $label
         span.badge.badge_light-blue= $count
         block

@@ -1,9 +1,5 @@
 $block = '.toolbar-button'
 
-toolbar-icon($icon)
-    padding-left 36px
-    background url(../images/$icon.png) no-repeat 10px center
-
 {$block}
     position relative
     padding-left 10px
@@ -22,14 +18,6 @@ toolbar-icon($icon)
         display inline-block
         line-height initial
 
-    &_icon_compare
-        toolbar-icon(icon-compare)
-    &_icon_favorite
-        toolbar-icon(icon-heart)
-        padding-left 33px
-    &_icon_user
-        toolbar-icon(icon-user)
-
     &_dropdown
         padding-right 20px
         &:after
@@ -45,3 +33,10 @@ toolbar-icon($icon)
         &:hover
             > .dropdown-menu
                 display block
+
+    .fa
+        color $grey
+
+    &:hover
+        .fa
+            color inherit

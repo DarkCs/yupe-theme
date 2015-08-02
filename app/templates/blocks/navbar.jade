@@ -18,11 +18,11 @@
                     a.top-menu__link(href=jv0) Контакты
         .navbar__personal
             .navbar__toolbar
-                +toolbarButton('Избранное', 33).toolbar-button_icon_favorite
-                +toolbarButton('Сравнение', 2).toolbar-button_icon_compare
+                +toolbarButton('<i class="fa fa-heart-o fa-lg fa-fw"></i> Избранное', 33)
+                +toolbarButton('<i class="fa fa-balance-scale fa-lg fa-fw"></i> Сравнение', 2)
             .navbar__user
                 if is_guest
                     a.btn.btn_login-button(href=jv0) Войти
                 else
-                    +toolbarButton('Личный кабинет').toolbar-button_icon_user.toolbar-button_dropdown
+                    +toolbarButton('<i class="fa fa-user fa-lg fa-fw"></i> Личный кабинет').toolbar-button_dropdown
                         +dropdown-menu()

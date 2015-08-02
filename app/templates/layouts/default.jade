@@ -1,19 +1,9 @@
-include ../helpers/variables
-include ../helpers/mixins
-
-+script([], ['debug.js', 'common.min.js'])
-
-doctype html
-html(lang='ru')
-    include ../partials/head
-    body
-        .main
-            .main__navbar
-                include ../blocks/navbar
-            .main__header
-                include ../blocks/header
-            block content
-            .main__footer
-                include ../blocks/footer
-
-        include ../blocks/scripts
+extends page
+block page_content
+    .main__navbar
+        include ../blocks/navbar
+    .main__header
+        include ../blocks/header
+    block content
+    .main__footer
+        include ../blocks/footer

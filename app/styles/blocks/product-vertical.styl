@@ -78,17 +78,6 @@ $b = '.product-vertical'
 
         background inherit
 
-product-vertical-extra-toolbar-button()
-    margin-right 4px
-
-    display inline-block
-    width 41px
-    height 41px
-
-    border 1px solid #cbcbcb
-
-    cursor pointer
-
 .product-vertical-extra
     font-size 13px
     text-align left
@@ -119,19 +108,29 @@ product-vertical-extra-toolbar-button()
         display inline-block
 
     &__toolbar
-        padding 10px 12px 4px
+        padding 12px
 
         background #e7e7e7
 
-    &__favorite
-        product-vertical-extra-toolbar-button()
+    &__button
+        margin-right 4px
 
-        background url(../images/icon-heart.png) no-repeat center center
+        display inline-block
+        width 41px
+        height 41px
 
-    &__compare
-        product-vertical-extra-toolbar-button()
+        border 1px solid #cbcbcb
+        color $grey
 
-        background url(../images/icon-compare.png) no-repeat center center
+        line-height 41px
+        text-align center
+        font-size 20px
+
+        cursor pointer
+
+        .fa
+            width 100%
+
 
     &__cart
         float right
