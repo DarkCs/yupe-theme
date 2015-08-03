@@ -120,6 +120,13 @@ block page_content
             .demo-block
                 include ../blocks/footer
 
+        #float-cart(data-collapse='persist')
+            .grid
+                .h3 Всплывающая корзина
+            .demo-block
+                .grid
+                    +cart-mini(true)(style='position: relative;')
+
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')

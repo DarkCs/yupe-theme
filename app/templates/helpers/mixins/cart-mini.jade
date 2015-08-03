@@ -1,0 +1,12 @@
+mixin cart-mini($active)
+    .cart-mini(class = $active ? 'cart-mini_active' : '')&attributes(attributes)
+        each $i in [1, 2]
+            .cart-mini__item
+                .cart-mini__thumbnail
+                    img(src='assets/images/content/product-small-' + $i + '.jpg').cart-mini__img
+                .cart-mini__info
+                    .cart-mini__title
+                        a(href=jv0).cart-mini__link Samsung Galaxy Alpha SM-G850F 32Gb
+                    +product-price(5678, 7890)
+        .cart-mini__bottom
+            a(href=jv0).btn.btn_success Оформить

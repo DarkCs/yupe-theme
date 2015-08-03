@@ -1,8 +1,15 @@
+button-colors($color)
+    background-color $color
+    box-shadow inset 0 0 0 1px $color
+    &:hover
+        background-color lighten($color, 5) !important
+    &:active
+        background-color darken($color, 1) !important
 .btn
     position relative
     display inline-block
     padding 12px 22px
-    color inherit
+    color #fff
     font-family $heading-fonts
     font-size 14px
     line-height 1
@@ -51,5 +58,4 @@
             background-color lighten($button-primary-color, 5)
 
     &_success
-        background-color $button-success-color
-        box-shadow inset 0 0 0 1px $button-success-color
+        button-colors($button-success-color)
