@@ -1,7 +1,5 @@
 $(function () {
+    'use strict';
 
-	'use strict';
-
-	// Code here
-
+    $('.js-cart').cart();
 });
