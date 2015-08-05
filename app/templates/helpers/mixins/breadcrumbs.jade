@@ -1,0 +1,8 @@
+mixin breadcrumbs($data)
+    - $data = $data || ['Главная', 'Категория', 'Товар']
+
+    .breadcrumbs
+        ul
+            each $i in $data
+                li
+                    a(href=jv0)= $i

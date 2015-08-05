@@ -127,6 +127,12 @@ block page_content
                 .grid
                     +cart-mini(true)(style='position: relative;')
 
+        #breadcrumbs(data-collapse='persist')
+            .grid
+                .h3 Хлебные крошки
+            .demo-block.demo-block_gray
+                .grid
+                    +breadcrumbs()
 block scriptsAfter
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse.js')
     script(src='assets/scripts/libs/jQuery-Collapse/src/jquery.collapse_storage.js')
