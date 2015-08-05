@@ -1,0 +1,40 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Каталог - грид';
+
+
+block content
+    .main__search.grid
+        include ../blocks/search-bar
+    .main__breadcrumbs.grid
+        +breadcrumbs(['Главная', 'Телефония, MP3-плееры, GPS', 'Телефоны'])
+    .main__title.grid
+        h1.h2 Мобильные телефоны
+    .main__catalog.grid
+        .cols
+            .col.grid-module-3
+                include ../blocks/catalog-filter
+            .col.grid-module-9
+                .catalog-controls
+                    .catalog-controls__col
+                        +sorter()
+                    .catalog-controls__col.catalog-controls__col_right
+                        |Вид каталога
+                .catalog
+                    each i in Array(6)
+                        .catalog__item
+                            .grid-module-3
+                                +product-v({
+                                    thumbnail: 'assets/images/content/product-vertical/1.png',
+                                    title: 'Смартфон Sony Xperia V (LT25i Black)',
+                                    price: '12 990',
+                                    oldPrice: '15 990',
+                                    is_hit: true
+                                })
+
+    .main__recently-viewed-slider
+        .grid
+            include ../blocks/recently-viewed-slider
+    .main__best-brands.grid
+        include ../blocks/best-brands

@@ -1,0 +1,41 @@
+.sorter
+    &__description
+        padding-right 10px
+
+        display inline
+
+        font-weight bold
+
+    a
+        position relative
+
+        margin 0 10px
+
+        color $active-link-color
+        border-bottom 1px dashed $active-link-color
+
+        &:hover
+            color lighten($active-link-color, 10)
+            border-bottom 1px dashed lighten($active-link-color, 10)
+
+            cursor pointer
+
+        &.asc, &.desc
+            color inherit
+            border-bottom none
+
+            &:after
+                position absolute
+                right -12px
+                top calc(50% - 5px)
+
+                width 12px
+                height 12px
+
+                content ""
+        &.asc
+            &:after
+                background url(../images/icon-arrow-small_down.png) no-repeat center center
+        &.desc
+            &:after
+                background url(../images/icon-arrow-small_up.png) no-repeat center center
