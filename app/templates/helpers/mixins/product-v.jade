@@ -11,7 +11,7 @@ mixin product-v($data)
 
     article.product-vertical&attributes(attributes)
         .product-vertical__label
-            if $data.oldPrice || $data.is_discount
+            if $data.is_discount
                 +product-label('%', {theme: 'discount'})
             else if $data.is_hit
                 +product-label('Хит', {theme: 'hit'})
