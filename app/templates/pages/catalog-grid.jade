@@ -20,21 +20,18 @@ block content
                     .catalog-controls__col
                         +sorter()
                     .catalog-controls__col.catalog-controls__col_right
-                        |Вид каталога
+                        include ../blocks/view-switch
                 .catalog
-                    each i in Array(6)
-                        .catalog__item
-                            .grid-module-3
-                                +product-v({
-                                    thumbnail: 'assets/images/content/product-vertical/1.png',
-                                    title: 'Смартфон Sony Xperia V (LT25i Black)',
-                                    price: '12 990',
-                                    oldPrice: '15 990',
-                                    is_hit: true
-                                })
-
-    .main__recently-viewed-slider
-        .grid
-            include ../blocks/recently-viewed-slider
-    .main__best-brands.grid
-        include ../blocks/best-brands
+                    .catalog__items
+                        each i in Array(6)
+                            .catalog__item
+                                .grid-module-3
+                                    +product-v({
+                                        thumbnail: 'assets/images/content/product-vertical/1.png',
+                                        title: 'Смартфон Sony Xperia V (LT25i Black)',
+                                        price: '12 990',
+                                        oldPrice: '15 990',
+                                        is_hit: true
+                                    })
+                    .catalog__pagination
+                        include ../blocks/pagination

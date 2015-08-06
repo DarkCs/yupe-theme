@@ -1,0 +1,39 @@
+.pagination
+    vertical-align middle
+    display inline-block
+    color black
+    font-family $heading-fonts
+    text-align center
+
+    & > li
+        display inline-block
+        border 1px solid $light-grey
+
+        &:not(.disabled):hover
+        &.active, &.selected
+            background-color $light-green
+            border-color $light-green
+            color #fff
+
+        &.prev, &.previous
+            margin-right 5px
+
+        &.next
+            margin-left 5px
+
+        &.prev, &.previous
+        &.next
+            background-origin border-box
+            user-select none
+
+            &.disabled
+                opacity .5
+
+        & > a
+        & > span
+            display inline-block
+            width 35px
+            height 35px
+            vertical-align middle
+            line-height 35px
+
