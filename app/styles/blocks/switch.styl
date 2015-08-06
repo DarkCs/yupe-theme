@@ -1,0 +1,43 @@
+.switch
+	display inline-table
+	table-layout fixed
+	font-weight 700
+	border-radius 3px
+	overflow hidden
+	user-select none
+
+	&__item
+		display table-cell
+
+		&:not(:first-child)
+			border-left none
+
+.switch-item
+	&__input
+		display none
+
+	&__label
+		vertical-align baseline
+		display block
+		font-family $heading-fonts
+		text-align center
+		text-decoration none
+		background transparent
+		user-select none
+
+		&:hover
+			color #000
+			cursor pointer
+
+	&__input:checked + &__label
+		color #000
+		cursor default
+
+	&__label-text
+		display inline-block
+		line-height 1
+		user-select none
+
+	&__label:hover > &__label-text
+	&__input:checked + &__label > &__label-text
+		border-bottom none

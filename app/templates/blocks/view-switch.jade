@@ -1,0 +1,26 @@
+.view-switch
+    .view-switch__caption
+    .view-switch__toggle
+        .switch
+            .switch__item
+                .switch-item
+                    input.switch-item__input(
+                        type = 'radio',
+                        id = 'view-switch-list',
+                        name = 'view-switch',
+                        value = 'list',
+                        checked = false
+                    )
+                    label.switch-item__label(for = 'view-switch-list')
+                        i.fa.fa-th-list.fa-fw
+            .switch__item
+                .switch-item
+                    input.switch-item__input(
+                        type = 'radio',
+                        id = 'view-switch-grid',
+                        name = 'view-switch',
+                        value = 'grid',
+                        checked = true
+                    )
+                    label.switch-item__label(for = 'view-switch-grid')
+                        i.fa.fa-th.fa-fw
