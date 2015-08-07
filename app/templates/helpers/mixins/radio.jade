@@ -1,0 +1,6 @@
+mixin radio()
+	- if (typeof attributes.id === 'undefined') attributes.id = shortid.generate();
+
+	input.radio(type='radio')&attributes(attributes)
+	label.radio__label(for=attributes.id)
+		block

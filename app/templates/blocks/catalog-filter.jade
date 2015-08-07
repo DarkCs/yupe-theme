@@ -1,2 +1,50 @@
 .catalog-filter
-    | Фильтр
+    .filter-block(data-collapse="persist", id='filter-price')
+        .filter-block__title
+            | Цена, руб.
+        .filter-block__body
+            .filter-block__range
+                span.input.input_range(sign-title="от")
+                    span.input__box
+                        input.input__control(placeholder='1000')
+                span.input.input_range(sign-title="до")
+                    span.input__box
+                        input.input__control(placeholder='79000')
+    .filter-block(data-collapse="persist", id='filter-producer')
+        .filter-block__title
+            | Производитель
+        .filter-block__body
+            .filter-block__list.filter-block__list_column_2
+                each $i in Array(9)
+                    .filter-block__list-item
+                        +checkbox()= 'Производитель'
+    .filter-block(data-collapse="persist", id='filter-radio')
+        .filter-block__title
+            | Радио
+        .filter-block__body
+            .filter-block__list
+                .filter-block__list-item
+                    +radio()(name='filter-radio') Да
+                .filter-block__list-item
+                    +radio()(name='filter-radio', disabled=true) Нет
+                .filter-block__list-item
+                    +radio()(name='filter-radio', checked=true) Неважно
+    .filter-block(data-collapse="persist", id='filter-accumulator')
+        .filter-block__title
+            | Тип аккумуляторов
+        .filter-block__body
+            .filter-block__list
+                .filter-block__list-item
+                    +checkbox() AA-совместимый
+                .filter-block__list-item
+                    +checkbox() AAА-совместимый
+                .filter-block__list-item
+                    +checkbox()(disabled=true) встроенный
+                .filter-block__list-item
+                    +checkbox() свой собственный
+    .filter-block
+        .filter-block__title
+            .filter-block__list-item
+                +checkbox() Слот для карты памяти
+    .catalog-filter__button
+        a(href=jv0).btn.btn_wide Применить

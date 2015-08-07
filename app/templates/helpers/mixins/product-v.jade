@@ -18,8 +18,10 @@ mixin product-v($data)
             else if $data.is_new
                 +product-label('New', {theme: 'new'})
 
-        .product-vertical__thumbnail
-            img(src=$data.thumbnail).product-vertical__img
+        a(href=jv0)
+            .product-vertical__thumbnail
+                img(src=$data.thumbnail).product-vertical__img
+
         .product-vertical__content
             a(href=jv0).product-vertical__title= $data.title
 

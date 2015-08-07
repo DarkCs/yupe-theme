@@ -12,6 +12,8 @@ gulp.task 'scripts', ->
     'components/jquery/dist/jquery.min.js'
     'components/svg4everybody/svg4everybody.min.js'
     'components/slick/slick/slick.min.js'
+    'components/jQuery-Collapse/src/jquery.collapse.js'
+    'components/jQuery-Collapse/src/jquery.collapse_storage.js'
     'app/scripts/views/**/*.js'
     'app/scripts/common.js'
   ]

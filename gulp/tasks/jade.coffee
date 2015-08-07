@@ -11,6 +11,7 @@ pkg = require '../../package.json'
 errorHandler = require '../utils/errorHandler'
 paths = require '../paths'
 getData = require '../utils/getData'
+shortid = require 'shortid'
 
 gulp.task 'jade', ->
   gulp.src 'app/templates/**/*.jade'
@@ -20,6 +21,7 @@ gulp.task 'jade', ->
   .pipe filter (file) -> /templates[\\\/]pages/.test file.path
   .pipe jade
     data:
+      shortid: shortid
       getData: getData
       page:
         copyright: pkg.copyright
