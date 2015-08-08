@@ -1,0 +1,50 @@
+include product-label
+include product-price
+
+mixin product-h($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/180x200'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || 12304
+    - $data.rating = $data.rating || 4.5
+    - if(typeof($data.in_stock) === 'undefined'){ $data.in_stock = true }
+
+    article.product-horizontal&attributes(attributes)
+        .product-horizontal__label
+            if $data.is_discount
+                +product-label('%', {theme: 'discount', slim: true})
+            else if $data.is_hit
+                +product-label('Хит', {theme: 'hit', slim: true})
+            else if $data.is_new
+                +product-label('New', {theme: 'new', slim: true})
+
+        a(href=jv0).product-horizontal__thumbnail
+                img(src=$data.thumbnail).product-horizontal__img
+
+        .product-horizontal__content
+            .product-horizontal__content-row
+                .product-horizontal__column-title
+                    a(href=jv0).product-horizontal__title= $data.title
+                    .product-horizontal__extra
+                        .product-horizontal-extra
+                            .product-horizontal-extra__item.product-horizontal-extra__item_rating
+                                +rating($data.rating)
+                            .product-horizontal-extra__item.product-horizontal-extra__item_reviews
+                                a(href=jv0) 6 отзывов
+                            .product-horizontal-extra__item.product-horizontal-extra__item_button
+                                a(href=jv0)
+                                    i.fa.fa-heart-o
+                            .product-horizontal-extra__item.product-horizontal-extra__item_button
+                                a(href=jv0)
+                                    i.fa.fa-balance-scale
+
+                .product-horizontal__column-price
+                    .product-horizontal__price
+                        +product-price($data.price, $data.oldPrice)
+                .product-horizontal__column-cart
+                    a(href=jv0).btn.btn_cart В корзину
+                    .product-horizontal__stock
+                        if $data.in_stock
+                            .in-stock В наличии
+                        else
+                            | Нет в наличии

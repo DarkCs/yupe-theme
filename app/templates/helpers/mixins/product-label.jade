@@ -1,3 +1,3 @@
 mixin product-label(label, options)
-    .product-label(class = options.align === 'left' ? 'product-label_left product-label_#{options.theme}' : 'product-label_#{options.theme}')
+    .product-label(class = options.slim == true ? 'product-label_slim product-label_#{options.theme}' : 'product-label_#{options.theme}')
         .product-label__text=label
