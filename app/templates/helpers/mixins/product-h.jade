@@ -30,7 +30,7 @@ mixin product-h($data)
                             .product-horizontal-extra__item.product-horizontal-extra__item_rating
                                 +rating($data.rating)
                             .product-horizontal-extra__item.product-horizontal-extra__item_reviews
-                                a(href=jv0) 6 отзывов
+                                +reviews-link() 6 отзывов
                             .product-horizontal-extra__item.product-horizontal-extra__item_button
                                 a(href=jv0)
                                     i.fa.fa-heart-o

@@ -14,6 +14,10 @@ gulp.task 'scripts', ->
     'components/slick/slick/slick.min.js'
     'components/jQuery-Collapse/src/jquery.collapse.js'
     'components/jQuery-Collapse/src/jquery.collapse_storage.js'
+    'components/select2/select2.js'
+    'components/fancybox/lib/jquery.mousewheel-3.0.6.pack.js'
+    'components/fancybox/source/jquery.fancybox.js'
+    'components/fancybox/helpers/*.js'
     'app/scripts/views/**/*.js'
     'app/scripts/common.js'
   ]

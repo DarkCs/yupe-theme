@@ -1,0 +1,81 @@
+$block = '.product-description'
+
+{$block}
+    margin-bottom 50px
+    padding 44px
+
+    background-color #fff
+
+    &__img-block
+        display table-cell
+
+        vertical-align top
+    &__entry
+        display table-cell
+
+        vertical-align top
+
+.entry
+    &__toolbar
+        display table
+        width 100%
+    &__toolbar-item
+        display inline-block
+        margin-right 10px
+
+    &__toolbar-left
+        display table-cell
+        text-align left
+
+    &__toolbar-right
+        display table-cell
+        text-align right
+
+    &__toolbar-button
+        margin-left 10px
+
+        display inline-block
+        width 41px
+        height 41px
+
+        border 1px solid $grey
+        color $grey
+
+        line-height 41px
+        text-align center
+        font-size 20px
+
+        cursor pointer
+
+        .fa
+            width 100%
+
+        &:hover
+            color $active-link-color
+            border-color @color
+
+    &__title
+        padding 20px 0
+    &__wysiwyg
+        //
+    &__variants
+        padding 0 0 20px 0
+
+        border-bottom 1px solid lighten($grey, 10)
+
+    &__variant
+        padding 10px 0
+
+        display table
+
+        width 100%
+
+    &__variant-title
+        display table-cell
+        width 50%
+
+    &__variant-value
+        display table-cell
+        width 50%
+    &__variant-value-select
+        border none

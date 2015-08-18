@@ -1,0 +1,69 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Карточка товара';
+
+
+block content
+    .main__breadcrumbs.grid
+        +breadcrumbs(['Главная', 'Телефония, MP3-плееры, GPS', 'Телефоны'])
+    .main__product-description.grid
+        .product-description
+            .product-description__img-block.grid-module-6
+                .product-gallery.js-product-gallery
+                    .product-gallery__body
+                        .product-gallery__img-wrap(data-product-image)
+                            img.product-gallery__main-img(src='assets/images/content/product/1.jpg')
+                        .product-gallery__label
+                            +product-label('Хит', {theme: 'hit'})
+                    .product-gallery__nav
+                        each undefined, i in Array(3)
+                            - var n = i + 1
+                            a.product-gallery__nav-item(
+                                href='assets/images/content/product/' + n + '.jpg'
+                                rel='group'
+                                data-product-thumbnail
+                            )
+                                img.product-gallery__nav-img(
+                                    src = 'assets/images/content/product/' + n + '_thumb.jpg'
+                                    alt=''
+                                )
+            .product-description__entry.grid-module-6
+                .entry
+                    .entry__toolbar
+                        .entry__toolbar-left
+                            .entry__toolbar-item
+                                +rating(4.2)
+                            .entry__toolbar-item
+                                +reviews-link() 6 отзывов
+                        .entry__toolbar-right
+                            a(href=jv0).entry__toolbar-button
+                                i.fa.fa-heart-o
+                            a(href=jv0).entry__toolbar-button
+                                i.fa.fa-balance-scale
+                    .entry__title
+                        h1.h1 Sony Xperia Z3 (D6603)
+                    .entry__wysiwyg
+                        .wysiwyg
+                            p Водонепроницаемый смартфон Sony Xperia Z3 воплотил в себе изящество дизайна и мощь высоких технологий.
+                            p Новое творение Sony доказывает: красота долговечна.
+                            p
+                                | Ведь ультратонкий алюминиевый каркас с закругленными краями, панели из прочного закаленного стекла и эксклюзивный дизайн
+                                | кнопки питания придают новому премиум-смартфону престижный элегантный вид. Но внешний вид – это еще не все, не так ли?
+                            p Именно поэтому в Sony позаботились о сбалансированном симметричном дизайне, чтобы устройство идеально ложилось в руку.
+                            p А благодаря простому и удобному интерфейсу пользоваться этим смартфоном удивительно комфортно.
+                    .entry__title
+                        h2.h3.h_upcase Варианты
+                    .entry__variants
+                        .entry__variant
+                            .entry__variant-title Цвет
+                            .entry__variant-value
+                                select.js-select2.entry__variant-value-select.noborder
+                                    option Красный
+                                    option Синий
+                        .entry__variant
+                            .entry__variant-title Память
+                            .entry__variant-value
+                                select.js-select2.entry__variant-value-select.noborder
+                                    option 16gb
+                                    option 32gb

@@ -33,7 +33,7 @@ mixin product-v($data)
                     .product-vertical-extra__rating
                         +rating($data.rating)
                     .product-vertical-extra__reviews
-                        a(href=jv0) 6 отзывов
+                        +reviews-link() 6 отзывов
                     .product-vertical-extra__stock
                         if $data.in_stock
                             .in-stock В наличии

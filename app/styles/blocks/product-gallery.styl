@@ -1,0 +1,89 @@
+.product-gallery
+    position relative
+
+    &__body
+        position relative
+        display table-cell
+        width 380px
+        height 380px
+        line-height 0
+        text-align center
+        vertical-align middle
+        background-color #fff
+        cursor pointer
+
+    &__img-wrap
+        display table-cell
+        width 380px
+        height 380px
+        line-height 0
+        text-align center
+        vertical-align middle
+        &:hover
+            &:before
+                position absolute
+                top -50%
+                left -50%
+                width 900px
+                height 900px
+                background-color transparent
+                content ''
+
+    &__main-img
+        max-height 100%
+        max-width 100%
+        & + img
+            background-color #fff
+    &__nav
+        position absolute
+        top 0
+        right 70px
+
+        width 70px
+
+        font-size 0
+
+    &__label
+        position absolute
+        top 16px
+        left 0
+        z-index 1
+
+    &__nav-item
+        position relative
+        display block
+
+        margin 6px 0
+
+        width 70px
+        height 70px
+
+        background-color #fff
+        background-position center
+        background-size cover
+
+        overflow hidden
+        vertical-align bottom
+
+        border 3px solid transparent
+
+        transition border .2s
+
+        &_active
+            border-color #fcd42d
+
+        &:hover
+            border 3px solid $active-link-color
+
+    &__nav-img
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+        max-width 100%
+        max-height 100%
+        transition transform .2s
+
+
+
