@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=1200">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<title>Карточка товара</title>
+		<meta name="description">
+		<meta name="keywords">
+		<meta name="copyright">
+		<link href="assets/scripts/libs/select2/select2.css" rel="stylesheet">
+		<link href="assets/scripts/libs/slick/slick/slick.css" rel="stylesheet">
+		<link href="assets/styles/common.css?1439926993090" rel="stylesheet">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="main">
+			<div class="main__navbar">
+				<div class="navbar">
+					<div class="navbar__wrapper grid">
+						<div class="navbar__menu">
+							<ul class="top-menu">
+								<li class="top-menu__item top-menu__item_active"><a href="javascript:void(0);" class="top-menu__link">Главная</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">О компании</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">Доставка</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">Оплата</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">Новости</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">Бренды</a>
+								</li>
+								<li class="top-menu__item"><a href="javascript:void(0);" class="top-menu__link">Контакты</a>
+								</li>
+							</ul>
+						</div>
+						<div class="navbar__personal">
+							<div class="navbar__toolbar"><a href="javascript:void(0);" class="toolbar-button"><span class="toolbar-button__label"><i class="fa fa-heart-o fa-lg fa-fw"></i> Избранное</span><span class="badge badge_light-blue">33</span></a>
+								<a href="javascript:void(0);" class="toolbar-button"><span class="toolbar-button__label"><i class="fa fa-balance-scale fa-lg fa-fw"></i> Сравнение</span><span class="badge badge_light-blue">2</span>
+								</a>
+							</div>
+							<div class="navbar__user"><a href="javascript:void(0);" class="toolbar-button toolbar-button_dropdown"><span class="toolbar-button__label"><i class="fa fa-user fa-lg fa-fw"></i> Личный кабинет</span><span class="badge badge_light-blue"></span><div class="dropdown-menu"><div class="dropdown-menu__header">Иванов Василий</div><div class="dropdown-menu__item"><div class="dropdown-menu__link">Мои заказы</div></div><div class="dropdown-menu__item"><div class="dropdown-menu__link">Мои настройки</div></div><div class="dropdown-menu__item"><div class="dropdown-menu__link">Обратная связь</div></div><div class="dropdown-menu__separator"></div><div class="dropdown-menu__item"><div class="dropdown-menu__link dropdown-menu__link_exit">Выход</div></div></div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__header">
+				<div class="header grid">
+					<div class="header__item header-logo">
+						<a href="javascript:void(0);" class="header__logo-link">
+							<img src="assets/images/logo.png" class="header-logo-image">
+						</a>
+					</div>
+					<div class="header__item header-description">Магазин бытовой техники</div>
+					<div class="header__item header-phone">
+						<div class="header__phone">8 (456) 123-45-67</div><a href="javascript:void(0);" class="header-phone-callback">Заказать звонок</a>
+					</div>
+					<div class="header__item header-cart">
+						<div class="header-cart__icon">
+							<div class="badge badge_light-blue">3</div>
+						</div>
+						<div class="header-cart__text-wrap">
+							<div class="header-cart__label">Моя корзина
+								<a href="javascript:void(0);" data-toggle="#cart-mini" class="header-cart__cart-toggle"></a>
+								<div class="cart-mini js-cart" id="cart-mini">
+									<div class="cart-mini__item js-cart__item">
+										<div class="cart-mini__thumbnail">
+											<img src="assets/images/content/product-small-1.jpg" class="cart-mini__img" />
+										</div>
+										<div class="cart-mini__info">
+											<div class="cart-mini__title"><a href="javascript:void(0);" class="cart-mini__link">Samsung Galaxy Alpha SM-G850F 32Gb</a>
+											</div>
+											<div class="product-price">5678<span class="ruble"> руб.</span>
+											</div>
+											<div class="product-price product-price_old">7890<span class="ruble"> руб.</span>
+											</div>
+										</div>
+										<div class="cart-mini__delete-btn js-cart__delete"><i class="fa fa-trash-o"></i>
+										</div>
+									</div>
+									<div class="cart-mini__item js-cart__item">
+										<div class="cart-mini__thumbnail">
+											<img src="assets/images/content/product-small-2.jpg" class="cart-mini__img" />
+										</div>
+										<div class="cart-mini__info">
+											<div class="cart-mini__title"><a href="javascript:void(0);" class="cart-mini__link">Samsung Galaxy Alpha SM-G850F 32Gb</a>
+											</div>
+											<div class="product-price">5678<span class="ruble"> руб.</span>
+											</div>
+											<div class="product-price product-price_old">7890<span class="ruble"> руб.</span>
+											</div>
+										</div>
+										<div class="cart-mini__delete-btn js-cart__delete"><i class="fa fa-trash-o"></i>
+										</div>
+									</div>
+									<div class="cart-mini__item js-cart__item">
+										<div class="cart-mini__thumbnail">
+											<img src="assets/images/content/product-small-3.jpg" class="cart-mini__img" />
+										</div>
+										<div class="cart-mini__info">
+											<div class="cart-mini__title"><a href="javascript:void(0);" class="cart-mini__link">Samsung Galaxy Alpha SM-G850F 32Gb</a>
+											</div>
+											<div class="product-price">5678<span class="ruble"> руб.</span>
+											</div>
+											<div class="product-price product-price_old">7890<span class="ruble"> руб.</span>
+											</div>
+										</div>
+										<div class="cart-mini__delete-btn js-cart__delete"><i class="fa fa-trash-o"></i>
+										</div>
+									</div>
+									<div class="cart-mini__bottom"><a href="javascript:void(0);" class="btn btn_success">Оформить</a>
+									</div>
+								</div>
+							</div>
+							<div class="header-cart__cost">
+								<div class="header-cart__cost-title">Сумма:</div>
+								<div class="header-cart__cost-price"><span>1 345</span><span class="ruble"> руб.</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__breadcrumbs grid">
+				<div class="breadcrumbs">
+					<ul>
+						<li><a href="javascript:void(0);">Главная</a>
+						</li>
+						<li><a href="javascript:void(0);">Телефония, MP3-плееры, GPS</a>
+						</li>
+						<li><a href="javascript:void(0);">Телефоны</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main__product-description grid">
+				<div class="product-description">
+					<div class="product-description__img-block grid-module-6">
+						<div class="product-gallery js-product-gallery">
+							<div class="product-gallery__body">
+								<div data-product-image class="product-gallery__img-wrap">
+									<img src="assets/images/content/product/1.jpg" class="product-gallery__main-img">
+								</div>
+								<div class="product-gallery__label">
+									<div class="product-label product-label_hit">
+										<div class="product-label__text">Хит</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-gallery__nav">
+								<a href="assets/images/content/product/1.jpg" rel="group" data-product-thumbnail class="product-gallery__nav-item">
+									<img src="assets/images/content/product/1_thumb.jpg" alt="" class="product-gallery__nav-img">
+								</a>
+								<a href="assets/images/content/product/2.jpg" rel="group" data-product-thumbnail class="product-gallery__nav-item">
+									<img src="assets/images/content/product/2_thumb.jpg" alt="" class="product-gallery__nav-img">
+								</a>
+								<a href="assets/images/content/product/3.jpg" rel="group" data-product-thumbnail class="product-gallery__nav-item">
+									<img src="assets/images/content/product/3_thumb.jpg" alt="" class="product-gallery__nav-img">
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="product-description__entry grid-module-6">
+						<div class="entry">
+							<div class="entry__toolbar">
+								<div class="entry__toolbar-left">
+									<div class="entry__toolbar-item">
+										<div class="rating rating_5">
+											<div class="rating__label">4.2</div>
+										</div>
+									</div>
+									<div class="entry__toolbar-item"><a href="javascript:void(0);" class="reviews-link">6 отзывов</a>
+									</div>
+								</div>
+								<div class="entry__toolbar-right"><a href="javascript:void(0);" class="entry__toolbar-button"><i class="fa fa-heart-o"></i></a><a href="javascript:void(0);" class="entry__toolbar-button"><i class="fa fa-balance-scale"></i></a>
+								</div>
+							</div>
+							<div class="entry__title">
+								<h1 class="h1">Sony Xperia Z3 (D6603)</h1>
+							</div>
+							<div class="entry__wysiwyg">
+								<div class="wysiwyg">
+									<p>Водонепроницаемый смартфон Sony Xperia Z3 воплотил в себе изящество дизайна и мощь высоких технологий.</p>
+									<p>Новое творение Sony доказывает: красота долговечна.</p>
+									<p>Ведь ультратонкий алюминиевый каркас с закругленными краями, панели из прочного закаленного стекла и эксклюзивный дизайн кнопки питания придают новому премиум-смартфону престижный элегантный вид. Но внешний вид – это еще не все, не так ли?</p>
+									<p>Именно поэтому в Sony позаботились о сбалансированном симметричном дизайне, чтобы устройство идеально ложилось в руку.</p>
+									<p>А благодаря простому и удобному интерфейсу пользоваться этим смартфоном удивительно комфортно.</p>
+								</div>
+							</div>
+							<div class="entry__title">
+								<h2 class="h3 h_upcase">Варианты</h2>
+							</div>
+							<div class="entry__variants">
+								<div class="entry__variant">
+									<div class="entry__variant-title">Цвет</div>
+									<div class="entry__variant-value">
+										<select class="js-select2 entry__variant-value-select noborder">
+											<option>Красный</option>
+											<option>Синий</option>
+										</select>
+									</div>
+								</div>
+								<div class="entry__variant">
+									<div class="entry__variant-title">Память</div>
+									<div class="entry__variant-value">
+										<select class="js-select2 entry__variant-value-select noborder">
+											<option>16gb</option>
+											<option>32gb</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__recently-viewed-slider">
+				<div class="grid">
+					<div class="h3">Вы недавно смотрели</div>
+					<div data-show='3' data-scroll='1' data-infinite="data-infinite" class="h-slider js-slick">
+						<div class="h-slider__buttons h-slider__buttons_noclip">
+							<div class="btn h-slider__control h-slider__next js-slick__next"></div>
+							<div class="btn h-slider__control h-slider__prev js-slick__prev"></div>
+						</div>
+						<div class="h-slider__slides js-slick__container">
+							<div class="h-slider__slide">
+								<div class="grid-module-4">
+									<div class="product-mini">
+										<div class="product-mini__thumbnail">
+											<a href="javascript:void(0);">
+												<img src="assets/images/content/product-small-1.jpg" class="product-mini__img">
+											</a>
+										</div>
+										<div class="product-mini__info">
+											<div class="product-mini__title"><a href="javascript:void(0);" class="product-mini__link">Humani generis de regius</a>
+											</div>
+											<div class="product-mini__price">
+												<div class="product-price">12304<span class="ruble"> руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="h-slider__slide">
+								<div class="grid-module-4">
+									<div class="product-mini">
+										<div class="product-mini__thumbnail">
+											<a href="javascript:void(0);">
+												<img src="assets/images/content/product-small-1.jpg" class="product-mini__img">
+											</a>
+										</div>
+										<div class="product-mini__info">
+											<div class="product-mini__title"><a href="javascript:void(0);" class="product-mini__link">Humani generis de regius</a>
+											</div>
+											<div class="product-mini__price">
+												<div class="product-price">12304<span class="ruble"> руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="h-slider__slide">
+								<div class="grid-module-4">
+									<div class="product-mini">
+										<div class="product-mini__thumbnail">
+											<a href="javascript:void(0);">
+												<img src="assets/images/content/product-small-1.jpg" class="product-mini__img">
+											</a>
+										</div>
+										<div class="product-mini__info">
+											<div class="product-mini__title"><a href="javascript:void(0);" class="product-mini__link">Humani generis de regius</a>
+											</div>
+											<div class="product-mini__price">
+												<div class="product-price">12304<span class="ruble"> руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="h-slider__slide">
+								<div class="grid-module-4">
+									<div class="product-mini">
+										<div class="product-mini__thumbnail">
+											<a href="javascript:void(0);">
+												<img src="assets/images/content/product-small-1.jpg" class="product-mini__img">
+											</a>
+										</div>
+										<div class="product-mini__info">
+											<div class="product-mini__title"><a href="javascript:void(0);" class="product-mini__link">Humani generis de regius</a>
+											</div>
+											<div class="product-mini__price">
+												<div class="product-price">12304<span class="ruble"> руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="h-slider__slide">
+								<div class="grid-module-4">
+									<div class="product-mini">
+										<div class="product-mini__thumbnail">
+											<a href="javascript:void(0);">
+												<img src="assets/images/content/product-small-1.jpg" class="product-mini__img">
+											</a>
+										</div>
+										<div class="product-mini__info">
+											<div class="product-mini__title"><a href="javascript:void(0);" class="product-mini__link">Humani generis de regius</a>
+											</div>
+											<div class="product-mini__price">
+												<div class="product-price">12304<span class="ruble"> руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__best-brands grid">
+				<div class="best-brands">
+					<div class="best-brands__title">
+						<div class="h3 h_upcase">Товары таких брендов</div>
+					</div>
+					<div class="best-brands__body">
+						<div class="grid">
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/apple.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/braun.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/lg.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/panasonic.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/philips.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/samsung.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/sharp.png" class="best-brands__img">
+							</div>
+							<div class="best-brands__item grid-module-2">
+								<img src="assets/images/content/brands/toshiba.png" class="best-brands__img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main__footer">
+				<div class="footer">
+					<div class="grid">
+						<div class="footer__wrap">
+							<div class="footer__group">
+								<div class="footer__item">© YupeStore 2015</div>
+								<div class="footer__item footer__item_mute">Все права защищены.</div>
+							</div>
+							<div class="footer__group">
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">О компании</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Доставка</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Оплата</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Новости</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Бренды</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Контакты</a>
+								</div>
+							</div>
+							<div class="footer__group">
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Телефония, МР3-плееры, GPS</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Домашнее видео</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Детские товары</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Активный отдых и туризм</a>
+								</div>
+								<div class="footer__item"><a href="javascript:void(0);" class="footer__link">Музыкальные инструменты</a>
+								</div>
+							</div>
+							<div class="footer__group">
+								<div class="footer__item footer__item_header">Контакты</div>
+								<div class="footer__item"><i class="fa fa-phone fa-fw"></i> (123) 456-78-90, 0 (123) 456-78-90</div>
+								<div class="footer__item"><i class="fa fa-envelope fa-fw"></i> E-mail: partner@YupeStore.net</div>
+								<div class="footer__item"><i class="fa fa-skype fa-fw"></i> Skype: YupeStore</div>
+							</div>
+							<div class="footer__group">
+								<div class="footer__item footer__item_header">Работаем</div>
+								<div class="footer__item">Пн–Пт 09:00–20:00</div>
+								<div class="footer__item">Сб 09:00–17:00</div>
+								<div class="footer__item">Вс выходной</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/scripts/debug.js?1439926993090"></script>
+		<script src="assets/scripts/common.min.js?1439926993090"></script>
+	</body>
+
+</html>
