@@ -20,13 +20,13 @@ block content
                         each undefined, i in Array(3)
                             - var n = i + 1
                             a.product-gallery__nav-item(
-                                href='assets/images/content/product/' + n + '.jpg'
-                                rel='group'
-                                data-product-thumbnail
+                            href='assets/images/content/product/' + n + '.jpg'
+                            rel='group'
+                            data-product-thumbnail
                             )
                                 img.product-gallery__nav-img(
-                                    src = 'assets/images/content/product/' + n + '_thumb.jpg'
-                                    alt=''
+                                src = 'assets/images/content/product/' + n + '_thumb.jpg'
+                                alt=''
                                 )
             .product-description__entry.grid-module-6
                 .entry
@@ -67,3 +67,31 @@ block content
                                 select.js-select2.entry__variant-value-select.noborder
                                     option 16gb
                                     option 32gb
+                    .entry__price
+                        | Цена:
+                        +product-price('34 900')
+                    .entry__count
+                        .entry__count-label
+                            | Кол-во:
+                        .entry__count-input
+                            +spinput(1)
+                        .entry__cart-button
+                            a(href=jv0).btn.btn_cart Купить
+                    .entry__subtotal
+                        | 34 900 x 1 = 34 900
+                        +ruble()
+        .product-features
+            .product-features__block.product-features__block_delivery
+                .product-features__header Доставка
+                .product-features__item Почта России
+                .product-features__item Курьер
+                .product-features__item Самовывоз
+            .product-features__block.product-features__block_payment
+                .product-features__header Оплата
+                .product-features__item Наличные
+                .product-features__item Online
+                .product-features__item Сбербанк
+            .product-features__block.product-features__block_warranty
+                .product-features__header Гарантии
+                .product-features__item Возврат
+                .product-features__item Обмен

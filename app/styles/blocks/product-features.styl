@@ -1,0 +1,39 @@
+$block = '.product-features'
+
+{$block}
+    margin-bottom 50px
+    padding 30px
+
+    display table
+
+    width 100%
+
+    background darken($background-color, 2)
+
+    &__block
+
+        display table-cell
+        width 30%
+
+        background-position 80px 5px
+        background-repeat no-repeat
+
+        &_delivery
+            background-image  url(../images/icon-delivery.png)
+        &_payment
+            background-image url(../images/icon-payment.png)
+        &_warranty
+            background-image url(../images/icon-payment.png)
+    &__item
+        padding 3px 0
+        margin-left 40%
+    &__header
+        margin-left 40%
+        padding 3px 0
+
+        font-weight bold
+
+        text-transform uppercase
+
+
+
