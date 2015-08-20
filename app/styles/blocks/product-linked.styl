@@ -1,0 +1,56 @@
+.product-linked
+    position relative
+
+    text-align center
+
+    &__thumbnail
+        position relative
+        display block
+
+        height 110px
+
+        overflow hidden
+
+    &__img
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+        max-width 100%
+        max-height 100%
+
+    &__info
+        padding 10px
+
+        font-size 16px
+    &__title
+        padding 0 0 10px
+    &__link
+        color $active-link-color
+        text-decoration underline
+
+    &:before
+        position absolute
+        top 55px
+
+        transform translate(-50%, -50%)
+
+        display block
+
+        font-size 30px
+
+        content '+'
+
+    &:first-child
+        &:before
+            display none
+
+    &__checkbox
+        position absolute
+        top 5px
+        right 50px
+
+        z-index 1
+
+    clearfix()

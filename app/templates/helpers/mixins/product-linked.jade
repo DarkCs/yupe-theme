@@ -1,0 +1,18 @@
+mixin product-linked($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/50x50'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || '12 304'
+
+    .product-linked&attributes(attributes)
+        .product-linked__checkbox
+            +checkbox()(checked = true).js-product-linked__checkbox
+        .product-linked__thumbnail
+            a(href=jv0)
+                img(src=$data.thumbnail).product-linked__img
+        .product-linked__info
+            .product-linked__title
+                a(href=jv0).product-linked__link= $data.title
+            .product-linked__price
+                +product-price($data.price, $data.oldPrice)
+

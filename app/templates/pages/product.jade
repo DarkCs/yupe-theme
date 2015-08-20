@@ -95,3 +95,16 @@ block content
                 .product-features__header Гарантии
                 .product-features__item Возврат
                 .product-features__item Обмен
+    .main__linked-products.grid
+        .h2 Вместе с этим товаром покупают
+        .linked-products
+            .cols
+                +product-linked({'thumbnail': 'assets/images/content/product-linked/3.jpg', 'title': 'Защитная пленка для телефона Luxcase для Sony Xperia Z3 Glossy', 'price': 650}).col.grid-module-3
+                +product-linked({'thumbnail': 'assets/images/content/product-linked/4.jpg', 'title': 'Флип-кейс Euro-Line Vivid для Xperia Z3 (зеленый)', 'price': 690}).col.grid-module-3
+                .linked-products__total
+                    .linked-products__total-label Ваша цена:
+                    .linked-products__total-price
+                        span.js-linked-products__total-price 36 500
+                        +ruble()
+                    .linked-products__total-cart
+                        a(href=jv0).btn.btn_cart В корзину
