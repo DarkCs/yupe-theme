@@ -6,7 +6,8 @@
         "svg4everybody": "~1.0.0",
         "jQuery-Collapse": "danielstocks/jQuery-Collapse#1.x",
         "select2": "3.5.x",
-        "fancybox": "~2.1.5"
+        "fancybox": "~2.1.5",
+        "tiny-pubsub": "https://raw.githubusercontent.com/cowboy/jquery-tiny-pubsub/master/src/tiny-pubsub.js"
     },
     "resolutions": {
         "jquery": ">=2.1.3"

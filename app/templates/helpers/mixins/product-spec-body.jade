@@ -1,0 +1,11 @@
+mixin product-spec-body(title, items)
+    - items = items || {};
+    .product-spec__body
+        h2.h3.product-spec__header= title
+
+        each value, index in items
+            dl.product-spec-item
+                dt.product-spec-item__name
+                    span.product-spec-item__name-inner= index
+                dd.product-spec-item__value
+                    span.product-spec-item__value-inner= value 

@@ -10,6 +10,7 @@ paths = require '../paths'
 gulp.task 'scripts', ->
   gulp.src [
     'components/jquery/dist/jquery.min.js'
+    'components/tiny-pubsub/index.js'
     'components/svg4everybody/svg4everybody.min.js'
     'components/slick/slick/slick.min.js'
     'components/jQuery-Collapse/src/jquery.collapse.js'

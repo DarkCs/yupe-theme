@@ -1,0 +1,27 @@
+mixin tabs(captions, options)
+    - options = options || {grid: false};
+    .tabs.tabs_classic.tabs_gray.js-tabs
+        +tabs-head(captions, options)
+        +tabs-bodies(options)
+            block
+
+mixin tabs-head(captions, options)
+    - options = options || {};
+    ul.tabs__list(class= (options.grid ? 'grid' : '') data-nav)
+        each caption, id in captions
+            - var href = '#' + id;
+            li.tabs__item
+                a.tabs__link(href=href)= caption
+
+mixin tabs-bodies(options)
+    .tabs__bodies.js-tabs-bodies
+        block
+
+mixin tab(id, options)
+    - options = options || {};
+    .tabs__body.js-tab(id=id class=options.grid ? 'grid' : '')
+        block
+
+mixin tab-cart(id, options)
+    .js-tab(id=id)
+        block

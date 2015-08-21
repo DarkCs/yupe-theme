@@ -31,6 +31,7 @@ gulp.task 'copy:scripts', ->
 gulp.task 'copy:components', ->
   gulp.src [
       'jquery/dist/jquery.min.js'
+      'tiny-pubsub/index.js'
       'svg4everybody/svg4everybody.min.js'
       'jQuery-Collapse/src/jquery.collapse.js'
       'jQuery-Collapse/src/jquery.collapse_storage.js'

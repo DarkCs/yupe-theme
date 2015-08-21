@@ -1,0 +1,64 @@
+$b = '.product-spec'
+
+{$b}
+    &__header
+        margin-bottom 12px
+
+        font-weight bold
+    &__body
+        margin-bottom 30px
+        &:last-child
+            margin-bottom 0
+
+{$b}-item
+    position relative
+
+    margin 0
+
+    background #fff
+
+    &__name
+        margin: 0 0 7px;
+
+        display: inline-block;
+        width: 49%;
+
+        font-size: 15px;
+        line-height: 17px;
+        vertical-align: top;
+
+        background: inherit;
+
+        &-inner
+            position: relative;
+            z-index: 2;
+
+            padding: 0 10px 0 0;
+
+            background: inherit;
+
+        &:after
+            position: absolute;
+            right: 5px;
+            left: 0;
+
+            margin: .85em 0 0;
+
+            height: 1px;
+            width 49%
+
+            content: '';
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAABCAAAAAA+i0toAAAAAnRSTlMA/1uRIrUAAAAMSURBVHheY7j1/z8ABY8C2UtBe8oAAAAASUVORK5CYII=') 0 0 repeat-x;
+    &__value
+        display: inline-block;
+
+        margin: 0 0 7px;
+
+        width: 50%;
+
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 18px;
+
+        vertical-align: bottom;
+        background: inherit;

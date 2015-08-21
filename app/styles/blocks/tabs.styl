@@ -1,0 +1,65 @@
+$b = '.tabs'
+
+tabs_classic()
+    &__link
+        position relative
+
+        padding 0 15px
+
+        display block
+
+        font-size 16px
+        white-space nowrap
+        line-height 43px
+        text-align center
+        text-decoration underline
+
+        color $active-link-color
+
+        cursor pointer
+        user-select none
+
+        &.is-active
+            text-decoration none
+
+            color inherit
+
+            cursor default
+    &__body
+        background-color #fff
+
+{$b}
+    position relative
+
+    &__addons
+        margin-top -50px
+        text-align right
+
+    &__list
+        display flex
+
+        &_delivery
+            justify-content space-between
+
+    &__item
+        &:first-child
+            {$b}__link
+                padding-left 0
+    &__bodies
+        background-color transparent
+
+    &__body
+        padding 30px
+
+    &_classic
+        {$b}
+            tabs_classic()
+
+    &_gray
+        {$b}
+            tabs_gray()
+
+    &_switch
+        {$b}
+            tabs_switch()
+
