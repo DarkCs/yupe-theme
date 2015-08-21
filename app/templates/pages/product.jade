@@ -150,4 +150,12 @@ block content
             +tab('reviews')
                 | Отзывы
             +tab('similar')
-                | Похожие
+                +h-slider({
+                    show: 4,
+                    scroll: 4,
+                    infinite: true,
+                    noclip_buttons: false
+                })
+                    each i in Array(5)
+                        .h-slider__slide
+                            +product-mini({thumbnail: 'assets/images/content/product-small-1.jpg'})
