@@ -47,6 +47,7 @@ gulp.task 'copy:components', ->
       'select2/select2.css'
       'select2/select2.png'
       'select2/select2-spinner.gif'
+      'bootstrap/dist/js/bootstrap.min.js'
     ],
     base: 'components'
     cwd: 'components'

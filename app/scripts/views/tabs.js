@@ -27,7 +27,7 @@
 
                 $bodiesWrapper.height(currentHeight);
 
-                if ((tabID !== current) && (root.$el.find(':animated').length === 0)) {
+                if ((tabID !== current) /*&& (root.$el.find(':animated').length === 0)*/) {
                     window.location.hash = tabID;
 
                     root.$el.find('#' + current).fadeOut(root.options.speed, function () {
@@ -67,7 +67,7 @@
                         $this.addClass(ACTIVE_CLASS);
 
                         $target.find('.js-slick').each(function () {
-                            $(this).ruShinaSlider();
+                            $(this).slider();
                         });
                     });
 
