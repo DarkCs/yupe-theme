@@ -1,29 +1,83 @@
 $block = '.rating'
 
+rating-color($color)
+    border-color $color
+    color $black
+    {$block}__corner:after
+        background-color $color
+    {$block}__triangle:after
+        background $color
+        border-color $color
+
 {$block}
+    font-size 13px
+    line-height 15px
     position relative
-
     display inline-block
-
-    padding 0 4px
-
-    color #e4e4e4
-
-    border-width 2px
+    width 27px
+    height 22px
+    margin-right 14px
+    padding 2px 0 0 2px
+    text-align center
+    cursor default
+    color #fff
+    border-width 2px 0 2px 2px
     border-style solid
+    border-color #359e00
 
-    &_1
-        border-color #e35b40
-        color $black
-    &_2
-        border-color #e98f1a
-        color $black
-    &_3
-        border-color #e4d100
-        color $black
-    &_4
-        border-color #b2ca0c
-        color $black
-    &_5
-        border-color #93cd22
-        color $black
+    background transparent !important
+
+    &[data-rate="1"]
+        rating-color(#e35b40)
+    &[data-rate="2"]
+        rating-color(#e98f1a)
+    &[data-rate="3"]
+        rating-color(#e4d100)
+    &[data-rate="4"]
+        rating-color(#b2ca0c)
+    &[data-rate="5"]
+        rating-color(#93cd22)
+
+    &__corner
+        position absolute
+        top -4px
+        right -11px
+        bottom -4px
+        clip rect(0px, 13px, 26px, 1px)
+        width 12px
+        &:after
+            position absolute
+            top -1px
+            right -1px
+            display block
+            width 22px
+            height 25px
+            content ""
+            transform scaleX(0.5) rotate(45deg)
+            border-width 5px 5px 0 0
+            border-style solid
+            border-color transparent
+            background-clip content-box
+            background transparent !important
+    &__triangle
+        position absolute
+        top 3px
+        bottom -2px
+        left 0
+        z-index 1
+        clip rect(-1px, 11px, 21px, 0px)
+        width 12px
+        height 26px
+        &:after
+            position absolute
+            top 1px
+            left -8px
+            display block
+            width 12px
+            height 12px
+            content ""
+            transform scaleX(0.5) rotate(45deg)
+            border-width 3px
+            border-style solid
+            border-color #359e00
+            background transparent !important

@@ -1,9 +1,7 @@
 mixin rating($rating)
-    -if($rating > 0 && $rating < 1) $class = 'rating_1'
-    -if($rating > 1 && $rating < 2) $class = 'rating_2'
-    -if($rating > 2 && $rating < 3) $class = 'rating_3'
-    -if($rating > 3 && $rating < 4) $class = 'rating_4'
-    -if($rating > 4 && $rating < 5) $class = 'rating_5'
-    .rating(class = $class)
+    - number = Math.round($rating)
+    .rating(data-rate=number)
         .rating__label
             =$rating
+        .rating__corner
+            .rating__triangle
