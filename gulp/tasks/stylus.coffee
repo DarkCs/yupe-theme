@@ -11,13 +11,14 @@ csscomb = require 'gulp-csscomb'
 errorHandler = require '../utils/errorHandler'
 paths = require '../paths'
 pkg = require '../../package.json'
+jeet = require 'jeet'
 
 gulp.task 'stylus', ->
   gulp.src ['common.styl', 'radar.styl'], cwd: 'app/styles'
   .pipe plumber errorHandler: errorHandler
   .pipe stylus
     errors: true,
-    use: rupture()
+    use: [rupture(), jeet()]
     sourcemap: if gutil.env.debug then {comment: false, inline: true} else false
   .pipe autoprefixer(
     'Android >= ' + pkg.browsers.android

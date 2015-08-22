@@ -64,7 +64,8 @@
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.2",
     "rupture": "^0.6.1",
-    "shortid": "2.x"
+    "shortid": "2.x",
+    "jeet": "^6.1.2"
   },
   "browsers": {
     "android": 4,

@@ -149,18 +149,16 @@ block content
                     p А благодаря простому и удобному интерфейсу пользоваться этим смартфоном удивительно комфортно.
             +tab('reviews')
                 .product-reviews
-                    .cols
-                        .col
-                            +product-review-item()
-                            +product-review-item()
-                        .col.grid-module-3
-                            .product-reviews__side
-                                a(href=jv0).btn.btn_primary.btn_wide Написать отзыв
-                                .product-reviews__stat
-                                    | Средняя оценка
-                                    +rating(4.2)
-                                    .product-reviews__hint
-                                        | 2 оценки
+                    .product-reviews__body
+                        +product-review-item()
+                        +product-review-item()
+                    .product-reviews__side
+                        a(href=jv0).btn.btn_primary.btn_wide Написать отзыв
+                        .product-reviews__stat
+                            | Средняя оценка
+                            +rating(4.2)
+                            .product-reviews__hint
+                                | 2 оценки
             +tab('similar')
                 +h-slider({
                     show: 4,

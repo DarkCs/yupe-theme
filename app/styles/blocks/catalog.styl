@@ -1,13 +1,16 @@
 $block = '.catalog'
 {$block}
-    margin-left -13px
-    margin-right -13px
+    margin-left -12px
+    margin-right -11px
 
+    &__items
+        clearfix()
     &__item
         padding 0 9px 25px
 
         display inline-block
 
+        column(1/3, cycle: 3, gutter: 0)
     &__pagination
         padding 20px 0
 

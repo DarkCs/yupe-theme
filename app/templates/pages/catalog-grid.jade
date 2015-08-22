@@ -25,13 +25,12 @@ block content
                     .catalog__items
                         each i in Array(6)
                             .catalog__item
-                                .grid-module-3
-                                    +product-v({
-                                        thumbnail: 'assets/images/content/product-vertical/1.png',
-                                        title: 'Смартфон Sony Xperia V (LT25i Black)',
-                                        price: '12 990',
-                                        oldPrice: '15 990',
-                                        is_hit: true
-                                    })
+                                +product-v({
+                                    thumbnail: 'assets/images/content/product-vertical/1.png',
+                                    title: 'Смартфон Sony Xperia V (LT25i Black)',
+                                    price: '12 990',
+                                    oldPrice: '15 990',
+                                    is_hit: true
+                                })
                     .catalog__pagination
                         include ../blocks/pagination
