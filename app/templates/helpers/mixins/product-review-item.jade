@@ -1,0 +1,23 @@
+mixin product-review-item(data)
+    .product-review-item
+        .product-review-user
+            span.product-review-user__name Василий Иванов
+        .product-review-item__stat
+            +rating(4)
+            span.product-review-item__rating-label хорошая модель
+            span.product-review-item__delivery Опыт использования: несколько месяцев
+        .product-review-item__stat
+            .product-review-item__title Достоинства:
+            .product-review-item__text
+                | Хорошая камера, отличный и яркий экран. Качественная музыка! Быстро работает и не зависает.
+        .product-review-item__stat
+            .product-review-item__title Недостатки:
+            .product-review-item__text
+                | Большой размер, с трудом помещается в руку. Не смотря на то, что использую в чехле на задней крышке появились пятна(окислился металл).
+        .product-review-item__stat
+            .product-review-item__title Комментарий:
+            .product-review-item__text
+                | До этого был iPhone 5 gb 16 поменяла на данную модель. Хорошее качество выдержал несколько падений и ни царапины. Отлично ловит связи и быстро работает. Получаются отличные фотографии. Прост в использовании. Много различных хороших приложений. Единственное не хватает памяти. Однозначно возьму и следующий iPhone.
+        .product-review-item__footer
+            | 15 августа
+            | , Санкт-Петербург
