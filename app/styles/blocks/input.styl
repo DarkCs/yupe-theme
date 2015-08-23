@@ -1,0 +1,37 @@
+.input
+    padding 9px 9px
+    width 100%
+    font-size 14px
+    background-color white
+    border 1px solid #999
+    transition background-color .35s, border-color .35s
+
+    &:focus
+        background-color tint($active-link-color, 97%)
+        border 1px solid $active-link-color
+        transition background-color .15s, border-color .15s
+
+    &[required]
+        &:not(:focus)
+            &::placeholder
+                &::after
+                    padding-left 3px
+                    color #de1f1f
+                    content '*'
+
+    &_textarea
+        padding-top 12px
+        padding-bottom 12px
+        min-height 122px
+        resize none
+    &_big
+        padding 14px
+.has-error
+    .input
+        border 1px solid #e01f2b
+        background-color #FEF3F4
+
+.has-success
+    .input
+        border 1px solid #7dbe40
+        background-color #F3F9EE

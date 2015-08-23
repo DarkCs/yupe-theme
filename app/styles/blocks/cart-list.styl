@@ -1,0 +1,25 @@
+$block = '.cart-list'
+
+{$block}
+    &__header
+        background $black
+        color #fff
+
+        clearfix()
+    &__column
+        column(1/5)
+
+        text-align center
+        line-height 50px
+    &__column_info
+        column(2/5)
+        text-align center
+    &__item
+        margin 15px 0 0
+        padding 0 0 15px
+
+        border-bottom 1px solid lighten($grey, 20)
+
+        &:last-child
+            margin-bottom 0
+            border-bottom none

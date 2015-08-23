@@ -1,0 +1,25 @@
+mixin cart-item($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/180x200'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || 12304
+    - $data.category = $data.category || 'Мобильные телефоны'
+    - $data.quantity = $data.quantity || 1
+
+    .cart-item
+        .cart-item__info
+            .cart-item__thumbnail
+                img(src=$data.thumbnail).cart-item__img
+            .cart-item__content
+                .cart-item__category= $data.category
+                .cart-item__title
+                    a(href=jv0).cart-item__link= $data.title
+        .cart-item__price= $data.price
+            +ruble()
+        .cart-item__quantity
+            +spinput($data.quantity)
+        .cart-item__summ= $data.price
+            +ruble()
+            .cart-item__action
+                a(href=jv0).js-cart__delete
+                    i.fa.fa-fw.fa-trash-o

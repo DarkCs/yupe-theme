@@ -1,0 +1,71 @@
+$block = '.cart-item'
+
+{$block}
+    position relative
+
+    line-height 128px
+
+    clearfix()
+    &__info
+        column(4/10)
+
+        padding 0 0 0 20px
+
+        clearfix()
+    &__thumbnail
+        position  relative
+
+        display block
+        float left
+        width 128px
+        height 128px
+
+        overflow hidden
+    &__img
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+        max-width 100%
+        max-height 100%
+    &__content
+        position absolute
+        top 50%
+        left 179px
+        transform translateY(-78%)
+
+        line-height 1.5em
+    &__category
+        color $grey
+    &__link
+        color $active-link-color
+
+        cursor pointer
+
+    &__quantity
+        column(2/10)
+        text-align center
+
+    &__price
+    &__summ
+        column(2/10)
+
+        text-align center
+        font-size 18px
+        font-weight bold
+
+    &__action
+        position absolute
+        right 15px
+        top 50%
+        transform translateY(-50%)
+
+        display inline-block
+
+        font-size 14px
+        line-height 1em
+
+        cursor pointer
+        &:hover
+            color #f00

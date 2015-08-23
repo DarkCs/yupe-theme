@@ -5,10 +5,13 @@ block page_content
     .main__header
         include ../blocks/header
     block content
-    .main__recently-viewed-slider
-        .grid
-            include ../blocks/recently-viewed-slider
-    .main__best-brands.grid
-        include ../blocks/best-brands
-    .main__footer
-        include ../blocks/footer
+    block recently_viewed
+        .main__recently-viewed-slider
+            .grid
+                include ../blocks/recently-viewed-slider
+    block best_brands
+        .main__best-brands.grid
+            include ../blocks/best-brands
+    block footer
+        .main__footer
+            include ../blocks/footer

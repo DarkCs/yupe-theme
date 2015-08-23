@@ -1,0 +1,56 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Корзина';
+
+
+block content
+    .main__search.grid
+        include ../blocks/search-bar
+    .main__breadcrumbs.grid
+        +breadcrumbs(['Главная', 'Корзина'])
+    .main__title.grid
+        h1.h2 Корзина
+    .main__cart-box.grid
+        .cart-box.js-cart
+            .cart-box__content
+                .cart-list
+                    .cart-list__header
+                        .cart-list__column.cart-list__column_info
+                            | Наименование
+                        .cart-list__column
+                            | Цена
+                        .cart-list__column
+                            | Количество
+                        .cart-list__column
+                            | Сумма
+                    .cart-list__items
+                        .cart-list__item.js-cart__item
+                            +cart-item({thumbnail: 'assets/images/content/product-vertical/1.png'})
+                        .cart-list__item.js-cart__item
+                            +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'})
+            .cart-box__coupon
+                span.cart-box__coupon-label Купон на скидку:
+                input.input.cart-box__coupon-input
+                a(href=jv0).btn.btn_primary Применить
+            .cart-box__fast-order
+                .fast-order
+                    .fast-order__header
+                        h2.h2 Быстрый заказ:
+                    .fast-order__inputs
+                        .fast-order__column
+                            input(required placeholder="Имя").input.input_big
+                        .fast-order__column
+                            input(required placeholder="Email").input.input_big
+                        .fast-order__column
+                            input(required placeholder="Телефон").input.input_big
+                    .fast-order__bottom
+                        a(href=jv0).btn.btn_big.fast-order__button Оформить быстрый заказ
+            .cart-box__bottom
+                .cart-box__subtotal
+                    | Итого: 1 товар на сумму
+                    +product-price('25 600').js-cart-box-subtotal
+                .cart-box__order-button
+                    a(href=jv0).btn.btn_big.btn_primary Оформить заказ
+block recently_viewed
+block best_brands
