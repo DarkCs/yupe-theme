@@ -1,0 +1,12 @@
+mixin rich-radio(data)
+    .rich-radio
+        - var uid = shortid.generate();
+        input.rich-radio__input(type='radio' name=data.name id=uid value=data.value hidden)&attributes(attributes)
+        label.rich-radio__label(for=uid)
+            .rich-radio-body
+                .rich-radio-body__content
+                    .rich-radio-body__heading
+                        span.rich-radio-body__title= data.title
+                    if data.text
+                        each item in data.text
+                            .rich-radio-body__text=item

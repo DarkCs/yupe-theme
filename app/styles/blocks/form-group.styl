@@ -1,0 +1,42 @@
+$block = '.form-group'
+
+{$block}
+    clearfix()
+
+    padding-bottom 20px
+    &__label
+        padding 10px 0
+
+        font-weight bold
+    &:last-child
+        padding-bottom 0
+{$block}
+    &_horizontal
+        {$block}__controls
+            cf()
+        {$block}__hint
+            shift(1/6)
+
+            padding 5px 0
+        {$block}__label
+            column(1/6)
+
+            padding 0
+
+            line-height 38px
+        {$block}__input
+            column(2/6)
+        {$block}__help
+            column(3/6)
+
+            line-height 38px
+
+.has-error
+    {$block}__label
+    {$block}__help
+        color #e01f2b
+
+.has-success
+    {$block}__label
+    {$block}__help
+        color #7dbe40

@@ -1,0 +1,56 @@
+.rich-radio
+    width 100%
+    margin-bottom 5px
+
+    &__input
+        position absolute
+        visibility hidden
+        display none
+
+        &:checked + label
+            border-color $active-link-color
+            color #000
+
+            &:after
+                display block
+
+    &__label
+        position relative
+        width 100%
+        display table
+        color $black
+        cursor pointer
+        transition border-color .5s ease-in-out, color .5s ease-in-out
+
+        &:hover
+            border-color $active-link-color
+            transition border-color .2s ease-in-out, color .2s ease-in-out
+            color #000
+
+        &:before
+            position absolute
+            content ''
+            width 18px
+            height 18px
+            top 12px
+            left 0
+            border 1px solid #999999
+            border-radius 9px
+            box-shadow 0 1px 4px 0 rgba(44, 44, 44, 0.1) inset
+            box-sizing border-box
+
+        &:after
+            position absolute
+            content ''
+            display none
+            width 8px
+            height 8px
+            top 17px
+            left 5px
+            background-color #999999
+            border-radius 4px
+
+    &__input:checked + &__label &__aside
+    &__label:hover &__aside
+        background-color $active-link-color
+        transition background-color .2s ease-in-out

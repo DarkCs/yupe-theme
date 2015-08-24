@@ -1,0 +1,60 @@
+.rich-radio-body
+	height 100%
+	display table
+
+	&__img
+		display block
+		margin-left 34px
+		margin-right -56px
+		position relative
+		width 161px
+		height 100%
+		min-height 111px
+
+		&:after
+			position absolute
+			content ''
+			left 0
+			right 0
+			top 0
+			bottom 0
+			margin auto
+
+		&_in-cash:after
+			sprite $in-cash
+
+		&_shop:after
+			sprite $market
+
+		&_online:after
+			sprite $online
+
+		&_bank:after
+			sprite $bank
+
+		&_credit:after
+			sprite $credit
+
+		&_railway:after
+			sprite $railway
+
+		&_pek:after
+			sprite $pek
+
+		&_trans-other:after
+			sprite $trans-other
+
+	&__content
+		display table-cell
+		vertical-align middle
+		height 100%
+		padding 10px 10px 10px 36px
+
+	&__heading
+		font-family $heading-fonts
+		font-weight bold
+		vertical-align middle
+		padding-bottom 10px
+
+	&__title
+		vertical-align middle

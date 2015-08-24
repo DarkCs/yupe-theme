@@ -1,0 +1,49 @@
+$block = '.order-box'
+
+{$block}
+    background #fff
+
+    margin-bottom 30px
+
+    &__header
+        position relative
+        padding 30px 0 10px
+        margin 0 30px
+
+        font-size 22px
+
+        border-bottom 2px solid lighten($grey, 20)
+
+
+    &__header-link
+        vertical-align middle
+
+        font-size 14px
+
+        color $grey
+    &__header-select
+        margin-top -8px
+
+        display inline-block
+        width auto
+
+    &__body
+        padding 30px
+    &__subtotal
+        padding 10px 0
+
+        font-weight bold
+        font-size 16px
+    &__bottom
+        padding 30px
+
+        border-top 1px solid lighten($grey, 20)
+
+    &__order-button
+        padding-top 5px
+.order-box-delivery
+    cf()
+    &__type
+        column(3/5)
+    &__address
+        column(2/5)

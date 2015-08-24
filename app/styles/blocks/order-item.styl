@@ -1,0 +1,20 @@
+$block = '.order-item'
+
+{$block}
+    clearfix()
+
+    padding 15px 0
+
+    font-size 18px
+    &:last-child
+        padding-bottom 0
+    &:first-child
+        padding-top 0
+    &__name
+        column(3/5)
+    &__quantity
+        column(1/5)
+    &__price
+        column(1/5)
+
+        text-align right

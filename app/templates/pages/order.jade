@@ -1,0 +1,144 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Оформление заказа';
+
+
+block content
+    .main__search.grid
+        include ../blocks/search-bar
+    .main__breadcrumbs.grid
+        +breadcrumbs(['Главная', 'Оформление заказа'])
+    .main__title.grid
+        h1.h2 Оформление заказа
+    .main__order.grid
+        .order-box
+            .order-box__header
+                | Мой заказ: 2 товара
+                a(href=jv0).order-box__header-link  (вернуться в корзину)
+            .order-box__body
+                +order-item()
+                +order-item()
+        .order-box
+            .order-box__header
+                | Покупатель
+            .order-box__body
+                .form-group.form-group_horizontal.has-error
+                    .form-group__hint
+                        | Введите ваше ФИО
+                    .form-group__controls
+                        .form-group__label
+                            | Ваше имя
+                            span.required  *
+                        .form-group__input
+                            input(placeholder="Иванов Василий Петрович").input
+                        .form-group__help
+                            | Необходимо заполнить ФИО
+                .form-group.form-group_horizontal.has-success
+                    .form-group__hint
+                        | Куда выслать информацию по заказу
+                    .form-group__controls
+                        .form-group__label
+                            | Email
+                            span.required  *
+                        .form-group__input
+                            input(placeholder="example@gmail.com").input
+                        .form-group__help
+                .form-group.form-group_horizontal
+                    .form-group__hint
+                        | Для согласования деталей заказа
+                    .form-group__controls
+                        .form-group__label
+                            | Телефон
+                            span.required  *
+                        .form-group__input
+                            input(placeholder="+1 (234) 567-89-01").input
+                        .form-group__help
+        .order-box
+            .order-box__header
+                | Доставка:
+                select.js-select2.order-box__header-select.noborder
+                    option Москва
+                    option Грозный
+            .order-box__body
+                .order-box-delivery
+                    .order-box-delivery__type
+                        +rich-radio({name: 'delivery', value: 0, title: 'Доставка по Москве - 300 руб.', text: ['Осуществляется на следующий день после подтверждения заказа.']})
+                        +rich-radio({name: 'delivery', value: 1, title: 'Срочная доставка в день заказа в пределах МКАД – 500 р.', text: ['']})
+                        +rich-radio({name: 'delivery', value: 2, title: 'Доставка за пределы МКАД – 600 р. (до 9 км включительно)', text: ['Осуществляется на следующий день после подтверждения заказа.']})
+                        +rich-radio({
+                            name: 'delivery',
+                            value: 3,
+                            title: 'Самовывоз',
+                            text: ['Здесь пишем адрес магазина или точки выдачи товаров.', 'Товар можно забрать ежедневно с 13:00 до 20:00 после подтверждения заказа менеджером.']
+                        })
+                    .order-box-delivery__address
+                        h3.h3 Адрес:
+                        .order-form
+                            .order-form__row
+                                .order-form__item
+                                    .form-group
+                                        .form-group__label
+                                            | Город
+                                            span.required  *
+                                        .form-group__input
+                                            input(placeholder="Москва").input
+                                        .form-group__help
+                            .order-form__row
+                                .order-form__item
+                                    .form-group
+                                        .form-group__label
+                                            | Улица
+                                            span.required  *
+                                        .form-group__input
+                                            input(placeholder="Московская").input
+                                        .form-group__help
+                            .order-form__row
+                                .order-form__item
+                                    .form-group
+                                        .form-group__label
+                                            | Дом
+                                            span.required  *
+                                        .form-group__input
+                                            input(placeholder="123а").input
+                                        .form-group__help
+                                .order-form__item
+                                    .form-group
+                                        .form-group__label
+                                            | Квартира
+                                        .form-group__input
+                                            input(placeholder="4").input
+                                        .form-group__help
+                            .order-form__row
+                                .order-form__item
+                                    .form-group
+                                        .form-group__label
+                                            | Дополнительная информация
+                                        .form-group__input
+                                            textarea(placeholder="").input
+                                        .form-group__help
+        .order-box
+            .order-box__header
+                | Способ оплаты
+            .order-box__body
+                +rich-radio({name: 'payment', value: 0, title: 'Наличный расчёт при получении', text: []})
+                +rich-radio({name: 'payment', value: 1, title: 'Яндекс.Деньги', text: []})
+                +rich-radio({name: 'payment', value: 2, title: 'QIWI Wallet', text: []})
+                +rich-radio({name: 'payment', value: 3, title: 'Банковский перевод', text: []})
+                +rich-radio({name: 'payment', value: 4, title: 'Почтовый перевод', text: []})
+            .coupon-box
+                span.coupon-box__label Купон на скидку:
+                input.input.coupon-box__input
+                a(href=jv0).btn.btn_primary.coupon-box__button Применить
+            .order-box__body
+                .order-box__subtotal Товаров на сумму:
+                    +product-price('34 900')
+                .order-box__subtotal Доставка:
+                    +product-price('300')
+            .order-box__bottom
+                .order-box__subtotal Итого:
+                    +product-price('35 200')
+                .order-box__order-button
+                    a(href=jv0).btn.btn_big.btn_primary Оформить заказ
+block recently_viewed
+block best_brands

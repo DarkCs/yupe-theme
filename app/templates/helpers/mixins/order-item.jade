@@ -1,0 +1,13 @@
+mixin order-item($data)
+    - $data = $data || {}
+    - $data.thumbnail = $data.thumbnail || 'http://placehold.it/180x200'
+    - $data.title = $data.title || 'Humani generis de regius'
+    - $data.price = $data.price || 12304
+    - $data.category = $data.category || 'Мобильные телефоны'
+    - $data.quantity = $data.quantity || 1
+
+    .order-item
+        .order-item__name= $data.title
+        .order-item__quantity= $data.quantity
+        .order-item__price
+            +product-price($data.price)

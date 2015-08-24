@@ -30,9 +30,10 @@ block content
                         .cart-list__item.js-cart__item
                             +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'})
             .cart-box__coupon
-                span.cart-box__coupon-label Купон на скидку:
-                input.input.cart-box__coupon-input
-                a(href=jv0).btn.btn_primary Применить
+                .coupon-box
+                    span.coupon-box__label Купон на скидку:
+                    input.input.coupon-box__input
+                    a(href=jv0).btn.btn_primary.coupon-box__button Применить
             .cart-box__fast-order
                 .fast-order
                     .fast-order__header
@@ -45,7 +46,7 @@ block content
                         .fast-order__column
                             input(required placeholder="Телефон").input.input_big
                     .fast-order__bottom
-                        a(href=jv0).btn.btn_big.fast-order__button Оформить быстрый заказ
+                        a(href=jv0).btn.btn_big.btn_wide.btn_white Оформить быстрый заказ
             .cart-box__bottom
                 .cart-box__subtotal
                     | Итого: 1 товар на сумму
