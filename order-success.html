@@ -13,13 +13,13 @@
 		<meta name="format-detection" content="address=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<title>Корзина</title>
+		<title>Спасибо за ваш заказ</title>
 		<meta name="description">
 		<meta name="keywords">
 		<meta name="copyright">
 		<link href="assets/scripts/libs/select2/select2.css" rel="stylesheet">
 		<link href="assets/scripts/libs/slick/slick/slick.css" rel="stylesheet">
-		<link href="assets/styles/common.css?1440533209921" rel="stylesheet">
+		<link href="assets/styles/common.css?1440533215167" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
@@ -217,16 +217,62 @@
 					<ul>
 						<li><a href="javascript:void(0);">Главная</a>
 						</li>
-						<li><a href="javascript:void(0);">Корзина</a>
+						<li><a href="javascript:void(0);">Спасибо за ваш заказ</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 			<div class="main__title grid">
-				<h1 class="h2">Корзина</h1>
+				<h1 class="h2">Спасибо за ваш заказ!</h1>
+				<h2 class="h3">Он будет обработан в ближайшее время.</h2>
 			</div>
-			<div class="main__cart-box grid">
-				<div class="order-box js-cart">
+			<div class="main__order-box grid">
+				<div class="order-box">
+					<div class="order-box__header order-box__header_black">
+						<div class="order-box__header-content">Номер вашего заказа:<b> 320</b>
+						</div>
+					</div>
+					<div class="order-box__body">
+						<div class="detail-view">
+							<div class="detail-view__item">
+								<div class="detail-view__title">Ожидаемая дата доставки:</div>
+								<div class="detail-view__text">Завтра</div>
+							</div>
+							<div class="detail-view__item">
+								<div class="detail-view__title">Адрес доставки:</div>
+								<div class="detail-view__text">ул. Ленина 232, кв. 14</div>
+							</div>
+							<div class="detail-view__item">
+								<div class="detail-view__title">Получатель:</div>
+								<div class="detail-view__text">Иванов Василий Петрович</div>
+							</div>
+						</div>
+						<div class="detail-view">
+							<div class="detail-view__item">
+								<div class="detail-view__title">Email:</div>
+								<div class="detail-view__text">example@gmail.com</div>
+							</div>
+							<div class="detail-view__item">
+								<div class="detail-view__title">Телефон:</div>
+								<div class="detail-view__text">+1 (234) 567-67-78</div>
+							</div>
+						</div>
+						<div class="detail-view">
+							<div class="detail-view__item">
+								<div class="detail-view__title">Доставка:</div>
+								<div class="detail-view__text">по Москве</div>
+							</div>
+							<div class="detail-view__item">
+								<div class="detail-view__title">Способ оплаты:</div>
+								<div class="detail-view__text">Наличный расчет при получении</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main__title">
+					<h2 class="h2">Данные вашего заказа</h2>
+				</div>
+				<div class="order-box">
 					<div class="order-box__header order-box__header_black">
 						<div class="cart-list-header">
 							<div class="cart-list__column cart-list__column_info">Наименование</div>
@@ -250,12 +296,8 @@
 								</div>
 								<div class="cart-item__price">12304<span class="ruble"> руб.</span>
 								</div>
-								<div class="cart-item__quantity"><span data-min-value='1' data-max-value='99' class="spinput js-spinput"><span class="spinput__minus js-spinput__minus"></span>
-									<input value="1" class="spinput__value" /><span class="spinput__plus js-spinput__plus"></span></span>
-								</div>
+								<div class="cart-item__quantity">1</div>
 								<div class="cart-item__summ">12304<span class="ruble"> руб.</span>
-									<div class="cart-item__action"><a href="javascript:void(0);" class="js-cart__delete"><i class="fa fa-fw fa-trash-o"></i></a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -273,47 +315,24 @@
 								</div>
 								<div class="cart-item__price">12304<span class="ruble"> руб.</span>
 								</div>
-								<div class="cart-item__quantity"><span data-min-value='1' data-max-value='99' class="spinput js-spinput"><span class="spinput__minus js-spinput__minus"></span>
-									<input value="1" class="spinput__value" /><span class="spinput__plus js-spinput__plus"></span></span>
-								</div>
+								<div class="cart-item__quantity">1</div>
 								<div class="cart-item__summ">12304<span class="ruble"> руб.</span>
-									<div class="cart-item__action"><a href="javascript:void(0);" class="js-cart__delete"><i class="fa fa-fw fa-trash-o"></i></a>
-									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="order-box__coupon">
-						<div class="coupon-box"><span class="coupon-box__label">Купон на скидку:</span>
-							<input class="input coupon-box__input"><a href="javascript:void(0);" class="btn btn_primary coupon-box__button">Применить</a>
-						</div>
-					</div>
-					<div class="order-box__fast-order">
-						<div class="fast-order">
-							<div class="fast-order__header">
-								<h2 class="h2">Быстрый заказ:</h2>
-							</div>
-							<div class="fast-order__inputs">
-								<div class="fast-order__column">
-									<input required placeholder="Имя" class="input input_big">
-								</div>
-								<div class="fast-order__column">
-									<input required placeholder="Email" class="input input_big">
-								</div>
-								<div class="fast-order__column">
-									<input required placeholder="Телефон" class="input input_big">
-								</div>
-							</div>
-							<div class="fast-order__bottom"><a href="javascript:void(0);" class="btn btn_big btn_wide btn_white">Оформить быстрый заказ</a>
 							</div>
 						</div>
 					</div>
 					<div class="order-box__bottom">
-						<div class="cart-box__subtotal">Итого: 1 товар на сумму
+						<div class="order-box__subtotal">Товаров на сумму:
 							<div class="product-price">25 600<span class="ruble"> руб.</span>
 							</div>
 						</div>
-						<div class="cart-box__order-button"><a href="javascript:void(0);" class="btn btn_big btn_primary">Оформить заказ</a>
+						<div class="order-box__subtotal">Доставка:
+							<div class="product-price">300<span class="ruble"> руб.</span>
+							</div>
+						</div>
+						<div class="order-box__subtotal order-box__subtotal_big">Итого:
+							<div class="product-price">25 900<span class="ruble"> руб.</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -369,8 +388,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="assets/scripts/debug.js?1440533209921"></script>
-		<script src="assets/scripts/common.min.js?1440533209921"></script>
+		<script src="assets/scripts/debug.js?1440533215167"></script>
+		<script src="assets/scripts/common.min.js?1440533215167"></script>
 	</body>
 
 </html>
