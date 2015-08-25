@@ -13,14 +13,14 @@ block content
         h1.h2 Оформление заказа
     .main__order.grid
         .order-box
-            .order-box__header
+            .order-box__header.order-box__header_normal
                 | Мой заказ: 2 товара
                 a(href=jv0).order-box__header-link  (вернуться в корзину)
             .order-box__body
                 +order-item()
                 +order-item()
         .order-box
-            .order-box__header
+            .order-box__header.order-box__header_normal
                 | Покупатель
             .order-box__body
                 .form-group.form-group_horizontal.has-error
@@ -55,7 +55,7 @@ block content
                             input(placeholder="+1 (234) 567-89-01").input
                         .form-group__help
         .order-box
-            .order-box__header
+            .order-box__header.order-box__header_normal
                 | Доставка:
                 select.js-select2.order-box__header-select.noborder
                     option Москва
@@ -118,7 +118,7 @@ block content
                                             textarea(placeholder="").input
                                         .form-group__help
         .order-box
-            .order-box__header
+            .order-box__header.order-box__header_normal
                 | Способ оплаты
             .order-box__body
                 +rich-radio({name: 'payment', value: 0, title: 'Наличный расчёт при получении', text: []})
@@ -131,12 +131,15 @@ block content
                 input.input.coupon-box__input
                 a(href=jv0).btn.btn_primary.coupon-box__button Применить
             .order-box__body
-                .order-box__subtotal Товаров на сумму:
+                .order-box__subtotal
+                    | Товаров на сумму:
                     +product-price('34 900')
-                .order-box__subtotal Доставка:
+                .order-box__subtotal
+                    | Доставка:
                     +product-price('300')
-            .order-box__bottom
-                .order-box__subtotal Итого:
+            .order-box__bottom.order-box__bottom_left
+                .order-box__subtotal.order-box__subtotal_big
+                    | Итого:
                     +product-price('35 200')
                 .order-box__order-button
                     a(href=jv0).btn.btn_big.btn_primary Оформить заказ

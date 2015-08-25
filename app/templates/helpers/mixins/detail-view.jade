@@ -1,0 +1,6 @@
+mixin detail-view($data)
+    .detail-view
+        each text, title in $data
+            .detail-view__item
+                .detail-view__title= title
+                .detail-view__text= text

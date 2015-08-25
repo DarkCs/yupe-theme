@@ -1,11 +1,6 @@
 $block = '.cart-list'
 
 {$block}
-    &__header
-        background $black
-        color #fff
-
-        clearfix()
     &__column
         column(1/5)
 
@@ -23,3 +18,9 @@ $block = '.cart-list'
         &:last-child
             margin-bottom 0
             border-bottom none
+
+{$block}-header
+    background $black
+    color #fff
+
+    clearfix()

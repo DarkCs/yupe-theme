@@ -1,10 +1,11 @@
-mixin cart-item($data)
+mixin cart-item($data, $static)
     - $data = $data || {}
     - $data.thumbnail = $data.thumbnail || 'http://placehold.it/180x200'
     - $data.title = $data.title || 'Humani generis de regius'
     - $data.price = $data.price || 12304
     - $data.category = $data.category || 'Мобильные телефоны'
     - $data.quantity = $data.quantity || 1
+    - $static = ($static === undefined ? false : $static)
 
     .cart-item
         .cart-item__info
@@ -17,9 +18,13 @@ mixin cart-item($data)
         .cart-item__price= $data.price
             +ruble()
         .cart-item__quantity
-            +spinput($data.quantity)
+            - if ($static)
+                =$data.quantity
+            - else
+                +spinput($data.quantity)
         .cart-item__summ= $data.price
             +ruble()
-            .cart-item__action
-                a(href=jv0).js-cart__delete
-                    i.fa.fa-fw.fa-trash-o
+            - if (!$static)
+                .cart-item__action
+                    a(href=jv0).js-cart__delete
+                        i.fa.fa-fw.fa-trash-o

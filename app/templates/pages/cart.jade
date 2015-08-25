@@ -12,29 +12,28 @@ block content
     .main__title.grid
         h1.h2 Корзина
     .main__cart-box.grid
-        .cart-box.js-cart
-            .cart-box__content
-                .cart-list
-                    .cart-list__header
-                        .cart-list__column.cart-list__column_info
-                            | Наименование
-                        .cart-list__column
-                            | Цена
-                        .cart-list__column
-                            | Количество
-                        .cart-list__column
-                            | Сумма
-                    .cart-list__items
-                        .cart-list__item.js-cart__item
-                            +cart-item({thumbnail: 'assets/images/content/product-vertical/1.png'})
-                        .cart-list__item.js-cart__item
-                            +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'})
-            .cart-box__coupon
+        .order-box.js-cart
+            .order-box__header.order-box__header_black
+                .cart-list-header
+                    .cart-list__column.cart-list__column_info
+                        | Наименование
+                    .cart-list__column
+                        | Цена
+                    .cart-list__column
+                        | Количество
+                    .cart-list__column
+                        | Сумма
+            .cart-list
+                .cart-list__item.js-cart__item
+                    +cart-item({thumbnail: 'assets/images/content/product-vertical/1.png'})
+                .cart-list__item.js-cart__item
+                    +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'})
+            .order-box__coupon
                 .coupon-box
                     span.coupon-box__label Купон на скидку:
                     input.input.coupon-box__input
                     a(href=jv0).btn.btn_primary.coupon-box__button Применить
-            .cart-box__fast-order
+            .order-box__fast-order
                 .fast-order
                     .fast-order__header
                         h2.h2 Быстрый заказ:
@@ -47,7 +46,7 @@ block content
                             input(required placeholder="Телефон").input.input_big
                     .fast-order__bottom
                         a(href=jv0).btn.btn_big.btn_wide.btn_white Оформить быстрый заказ
-            .cart-box__bottom
+            .order-box__bottom
                 .cart-box__subtotal
                     | Итого: 1 товар на сумму
                     +product-price('25 600').js-cart-box-subtotal

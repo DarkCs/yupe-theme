@@ -1,0 +1,64 @@
+extends ../layouts/default
+
+block head
+    - pageTitle = 'Спасибо за ваш заказ';
+
+
+block content
+    .main__search.grid
+        include ../blocks/search-bar
+    .main__breadcrumbs.grid
+        +breadcrumbs(['Главная', 'Спасибо за ваш заказ'])
+    .main__title.grid
+        h1.h2 Спасибо за ваш заказ!
+        h2.h3 Он будет обработан в ближайшее время.
+    .main__order-box.grid
+        .order-box
+            .order-box__header.order-box__header_black
+                .order-box__header-content
+                    | Номер вашего заказа:
+                    b  320
+            .order-box__body
+                +detail-view({
+                    'Ожидаемая дата доставки:': 'Завтра',
+                    'Адрес доставки:': 'ул. Ленина 232, кв. 14',
+                    'Получатель:': 'Иванов Василий Петрович'
+                })
+                +detail-view({
+                    'Email:': 'example@gmail.com',
+                    'Телефон:': '+1 (234) 567-67-78'
+                })
+                +detail-view({
+                    'Доставка:': 'по Москве',
+                    'Способ оплаты:': 'Наличный расчет при получении'
+                })
+        .main__title
+            h2.h2 Данные вашего заказа
+        .order-box
+            .order-box__header.order-box__header_black
+                .cart-list-header
+                    .cart-list__column.cart-list__column_info
+                        | Наименование
+                    .cart-list__column
+                        | Цена
+                    .cart-list__column
+                        | Количество
+                    .cart-list__column
+                        | Сумма
+            .cart-list
+                .cart-list__item.js-cart__item
+                    +cart-item({thumbnail: 'assets/images/content/product-vertical/1.png'}, true)
+                .cart-list__item.js-cart__item
+                    +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'}, true)
+            .order-box__bottom
+                .order-box__subtotal
+                    | Товаров на сумму:
+                    +product-price('25 600')
+                .order-box__subtotal
+                    | Доставка:
+                    +product-price('300')
+                .order-box__subtotal.order-box__subtotal_big
+                    | Итого:
+                    +product-price('25 900')
+block recently_viewed
+block best_brands
