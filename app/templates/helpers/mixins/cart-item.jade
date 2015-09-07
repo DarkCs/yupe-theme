@@ -7,7 +7,8 @@ mixin cart-item($data, $static)
     - $data.quantity = $data.quantity || 1
     - $static = ($static === undefined ? false : $static)
 
-    .cart-item
+    .cart-item.js-cart__item
+        input(type="hidden", value=$data.price).js-cart__item-price
         .cart-item__info
             .cart-item__thumbnail
                 img(src=$data.thumbnail).cart-item__img
@@ -21,7 +22,7 @@ mixin cart-item($data, $static)
             - if ($static)
                 =$data.quantity
             - else
-                +spinput($data.quantity)
+                +spinput($data.quantity).js-cart__item-quantity
         .cart-item__summ= $data.price
             +ruble()
             - if (!$static)

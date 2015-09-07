@@ -24,9 +24,9 @@ block content
                     .cart-list__column
                         | Сумма
             .cart-list
-                .cart-list__item.js-cart__item
+                .cart-list__item
                     +cart-item({thumbnail: 'assets/images/content/product-vertical/1.png'})
-                .cart-list__item.js-cart__item
+                .cart-list__item
                     +cart-item({thumbnail: 'assets/images/content/product-vertical/5.png'})
             .order-box__coupon
                 .coupon-box
@@ -48,8 +48,11 @@ block content
                         a(href=jv0).btn.btn_big.btn_wide.btn_white Оформить быстрый заказ
             .order-box__bottom
                 .cart-box__subtotal
-                    | Итого: 1 товар на сумму
-                    +product-price('25 600').js-cart-box-subtotal
+                    | Итого: &nbsp;
+                    span.js-cart__items-count  2
+                    | &nbsp; товар(а) на сумму &nbsp;
+                    span.js-cart__subtotal 25 600
+                    +ruble()
                 .cart-box__order-button
                     a(href=jv0).btn.btn_big.btn_primary Оформить заказ
 block recently_viewed
