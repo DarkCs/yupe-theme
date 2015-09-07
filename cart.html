@@ -19,7 +19,7 @@
 		<meta name="copyright">
 		<link href="assets/scripts/libs/select2/select2.css" rel="stylesheet">
 		<link href="assets/scripts/libs/slick/slick/slick.css" rel="stylesheet">
-		<link href="assets/styles/common.css?1440781064690" rel="stylesheet">
+		<link href="assets/styles/common.css?1441641856554" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
@@ -236,8 +236,9 @@
 						</div>
 					</div>
 					<div class="cart-list">
-						<div class="cart-list__item js-cart__item">
-							<div class="cart-item">
+						<div class="cart-list__item">
+							<div class="cart-item js-cart__item">
+								<input type="hidden" value="12304" class="js-cart__item-price" />
 								<div class="cart-item__info">
 									<div class="cart-item__thumbnail">
 										<img src="assets/images/content/product-vertical/1.png" class="cart-item__img" />
@@ -251,7 +252,7 @@
 								<div class="cart-item__price">12304<span class="ruble"> руб.</span>
 								</div>
 								<div class="cart-item__quantity"><span data-min-value='1' data-max-value='99' class="spinput js-spinput"><span class="spinput__minus js-spinput__minus"></span>
-									<input value="1" class="spinput__value" /><span class="spinput__plus js-spinput__plus"></span></span>
+									<input value="1" class="spinput__value js-cart__item-quantity" /><span class="spinput__plus js-spinput__plus"></span></span>
 								</div>
 								<div class="cart-item__summ">12304<span class="ruble"> руб.</span>
 									<div class="cart-item__action"><a href="javascript:void(0);" class="js-cart__delete"><i class="fa fa-fw fa-trash-o"></i></a>
@@ -259,8 +260,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="cart-list__item js-cart__item">
-							<div class="cart-item">
+						<div class="cart-list__item">
+							<div class="cart-item js-cart__item">
+								<input type="hidden" value="12304" class="js-cart__item-price" />
 								<div class="cart-item__info">
 									<div class="cart-item__thumbnail">
 										<img src="assets/images/content/product-vertical/5.png" class="cart-item__img" />
@@ -274,7 +276,7 @@
 								<div class="cart-item__price">12304<span class="ruble"> руб.</span>
 								</div>
 								<div class="cart-item__quantity"><span data-min-value='1' data-max-value='99' class="spinput js-spinput"><span class="spinput__minus js-spinput__minus"></span>
-									<input value="1" class="spinput__value" /><span class="spinput__plus js-spinput__plus"></span></span>
+									<input value="1" class="spinput__value js-cart__item-quantity" /><span class="spinput__plus js-spinput__plus"></span></span>
 								</div>
 								<div class="cart-item__summ">12304<span class="ruble"> руб.</span>
 									<div class="cart-item__action"><a href="javascript:void(0);" class="js-cart__delete"><i class="fa fa-fw fa-trash-o"></i></a>
@@ -309,9 +311,7 @@
 						</div>
 					</div>
 					<div class="order-box__bottom">
-						<div class="cart-box__subtotal">Итого: 1 товар на сумму
-							<div class="product-price">25 600<span class="ruble"> руб.</span>
-							</div>
+						<div class="cart-box__subtotal">Итого: &nbsp;<span class="js-cart__items-count"> 2</span>&nbsp; товар(а) на сумму &nbsp;<span class="js-cart__subtotal">25 600</span><span class="ruble"> руб.</span>
 						</div>
 						<div class="cart-box__order-button"><a href="javascript:void(0);" class="btn btn_big btn_primary">Оформить заказ</a>
 						</div>
@@ -369,8 +369,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="assets/scripts/debug.js?1440781064690"></script>
-		<script src="assets/scripts/common.min.js?1440781064690"></script>
+		<script src="assets/scripts/debug.js?1441641856554"></script>
+		<script src="assets/scripts/common.min.js?1441641856554"></script>
 	</body>
 
 </html>
