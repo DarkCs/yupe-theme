@@ -19,7 +19,7 @@
 		<meta name="copyright">
 		<link href="assets/scripts/libs/select2/select2.css" rel="stylesheet">
 		<link href="assets/scripts/libs/slick/slick/slick.css" rel="stylesheet">
-		<link href="assets/styles/common.css?1441641871487" rel="stylesheet">
+		<link href="assets/styles/common.css?1441735880560" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
@@ -117,15 +117,17 @@
 							<div class="header__item header-phone">
 								<div class="header__phone">8 (456) 123-45-67</div><a href="javascript:void(0);" class="header-phone-callback">Заказать звонок</a>
 							</div>
-							<div class="header__item header-cart">
+							<div class="header__item header-cart js-cart">
 								<div class="header-cart__icon">
 									<div class="badge badge_light-blue">3</div>
 								</div>
 								<div class="header-cart__text-wrap">
 									<div class="header-cart__label">Моя корзина
 										<a href="javascript:void(0);" data-toggle="#cart-mini" class="header-cart__cart-toggle"></a>
-										<div class="cart-mini js-cart" id="cart-mini">
+										<div class="cart-mini" id="cart-mini">
 											<div class="cart-mini__item js-cart__item">
+												<input type="hidden" value="5678" class="js-cart__item-price" />
+												<input type="hidden" value="1" class="js-cart__item-quantity" />
 												<div class="cart-mini__thumbnail">
 													<img src="assets/images/content/product-small-1.jpg" class="cart-mini__img" />
 												</div>
@@ -141,6 +143,8 @@
 												</div>
 											</div>
 											<div class="cart-mini__item js-cart__item">
+												<input type="hidden" value="5678" class="js-cart__item-price" />
+												<input type="hidden" value="1" class="js-cart__item-quantity" />
 												<div class="cart-mini__thumbnail">
 													<img src="assets/images/content/product-small-2.jpg" class="cart-mini__img" />
 												</div>
@@ -156,6 +160,8 @@
 												</div>
 											</div>
 											<div class="cart-mini__item js-cart__item">
+												<input type="hidden" value="5678" class="js-cart__item-price" />
+												<input type="hidden" value="1" class="js-cart__item-quantity" />
 												<div class="cart-mini__thumbnail">
 													<img src="assets/images/content/product-small-3.jpg" class="cart-mini__img" />
 												</div>
@@ -176,7 +182,7 @@
 									</div>
 									<div class="header-cart__cost">
 										<div class="header-cart__cost-title">Сумма:</div>
-										<div class="header-cart__cost-price"><span>1 345</span><span class="ruble"> руб.</span>
+										<div class="header-cart__cost-price"><span class="js-cart__subtotal">1 345</span><span class="ruble"> руб.</span>
 										</div>
 									</div>
 								</div>
@@ -1313,8 +1319,10 @@
 					</div>
 					<div class="demo-block">
 						<div class="grid">
-							<div class="cart-mini js-cart cart-mini_active" style="position: relative;">
+							<div class="cart-mini cart-mini_active" style="position: relative;">
 								<div class="cart-mini__item js-cart__item">
+									<input type="hidden" value="5678" class="js-cart__item-price" />
+									<input type="hidden" value="1" class="js-cart__item-quantity" />
 									<div class="cart-mini__thumbnail">
 										<img src="assets/images/content/product-small-1.jpg" class="cart-mini__img" />
 									</div>
@@ -1330,6 +1338,8 @@
 									</div>
 								</div>
 								<div class="cart-mini__item js-cart__item">
+									<input type="hidden" value="5678" class="js-cart__item-price" />
+									<input type="hidden" value="1" class="js-cart__item-quantity" />
 									<div class="cart-mini__thumbnail">
 										<img src="assets/images/content/product-small-2.jpg" class="cart-mini__img" />
 									</div>
@@ -1345,6 +1355,8 @@
 									</div>
 								</div>
 								<div class="cart-mini__item js-cart__item">
+									<input type="hidden" value="5678" class="js-cart__item-price" />
+									<input type="hidden" value="1" class="js-cart__item-quantity" />
 									<div class="cart-mini__thumbnail">
 										<img src="assets/images/content/product-small-3.jpg" class="cart-mini__img" />
 									</div>
@@ -1386,8 +1398,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="assets/scripts/debug.js?1441641871487"></script>
-		<script src="assets/scripts/common.min.js?1441641871487"></script>
+		<script src="assets/scripts/debug.js?1441735880560"></script>
+		<script src="assets/scripts/common.min.js?1441735880560"></script>
 	</body>
 
 </html>

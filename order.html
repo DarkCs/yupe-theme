@@ -19,7 +19,7 @@
 		<meta name="copyright">
 		<link href="assets/scripts/libs/select2/select2.css" rel="stylesheet">
 		<link href="assets/scripts/libs/slick/slick/slick.css" rel="stylesheet">
-		<link href="assets/styles/common.css?1441641868822" rel="stylesheet">
+		<link href="assets/styles/common.css?1441735877905" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
 	</head>
 
@@ -68,15 +68,17 @@
 					<div class="header__item header-phone">
 						<div class="header__phone">8 (456) 123-45-67</div><a href="javascript:void(0);" class="header-phone-callback">Заказать звонок</a>
 					</div>
-					<div class="header__item header-cart">
+					<div class="header__item header-cart js-cart">
 						<div class="header-cart__icon">
 							<div class="badge badge_light-blue">3</div>
 						</div>
 						<div class="header-cart__text-wrap">
 							<div class="header-cart__label">Моя корзина
 								<a href="javascript:void(0);" data-toggle="#cart-mini" class="header-cart__cart-toggle"></a>
-								<div class="cart-mini js-cart" id="cart-mini">
+								<div class="cart-mini" id="cart-mini">
 									<div class="cart-mini__item js-cart__item">
+										<input type="hidden" value="5678" class="js-cart__item-price" />
+										<input type="hidden" value="1" class="js-cart__item-quantity" />
 										<div class="cart-mini__thumbnail">
 											<img src="assets/images/content/product-small-1.jpg" class="cart-mini__img" />
 										</div>
@@ -92,6 +94,8 @@
 										</div>
 									</div>
 									<div class="cart-mini__item js-cart__item">
+										<input type="hidden" value="5678" class="js-cart__item-price" />
+										<input type="hidden" value="1" class="js-cart__item-quantity" />
 										<div class="cart-mini__thumbnail">
 											<img src="assets/images/content/product-small-2.jpg" class="cart-mini__img" />
 										</div>
@@ -107,6 +111,8 @@
 										</div>
 									</div>
 									<div class="cart-mini__item js-cart__item">
+										<input type="hidden" value="5678" class="js-cart__item-price" />
+										<input type="hidden" value="1" class="js-cart__item-quantity" />
 										<div class="cart-mini__thumbnail">
 											<img src="assets/images/content/product-small-3.jpg" class="cart-mini__img" />
 										</div>
@@ -127,7 +133,7 @@
 							</div>
 							<div class="header-cart__cost">
 								<div class="header-cart__cost-title">Сумма:</div>
-								<div class="header-cart__cost-price"><span>1 345</span><span class="ruble"> руб.</span>
+								<div class="header-cart__cost-price"><span class="js-cart__subtotal">1 345</span><span class="ruble"> руб.</span>
 								</div>
 							</div>
 						</div>
@@ -297,8 +303,8 @@
 						<div class="order-box-delivery">
 							<div class="order-box-delivery__type">
 								<div class="rich-radio">
-									<input type="radio" name="delivery" id="EyaoEiLT" value="0" hidden="hidden" class="rich-radio__input" />
-									<label for="EyaoEiLT" class="rich-radio__label">
+									<input type="radio" name="delivery" id="VyIyNzOT" value="0" hidden="hidden" class="rich-radio__input" />
+									<label for="VyIyNzOT" class="rich-radio__label">
 										<div class="rich-radio-body">
 											<div class="rich-radio-body__content">
 												<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Доставка по Москве - 300 руб.</span>
@@ -309,8 +315,8 @@
 									</label>
 								</div>
 								<div class="rich-radio">
-									<input type="radio" name="delivery" id="VJxajVsI6" value="1" hidden="hidden" class="rich-radio__input" />
-									<label for="VJxajVsI6" class="rich-radio__label">
+									<input type="radio" name="delivery" id="V1g81Nzua" value="1" hidden="hidden" class="rich-radio__input" />
+									<label for="V1g81Nzua" class="rich-radio__label">
 										<div class="rich-radio-body">
 											<div class="rich-radio-body__content">
 												<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Срочная доставка в день заказа в пределах МКАД – 500 р.</span>
@@ -321,8 +327,8 @@
 									</label>
 								</div>
 								<div class="rich-radio">
-									<input type="radio" name="delivery" id="EkWasVi86" value="2" hidden="hidden" class="rich-radio__input" />
-									<label for="EkWasVi86" class="rich-radio__label">
+									<input type="radio" name="delivery" id="VyWIJNz_a" value="2" hidden="hidden" class="rich-radio__input" />
+									<label for="VyWIJNz_a" class="rich-radio__label">
 										<div class="rich-radio-body">
 											<div class="rich-radio-body__content">
 												<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Доставка за пределы МКАД – 600 р. (до 9 км включительно)</span>
@@ -333,8 +339,8 @@
 									</label>
 								</div>
 								<div class="rich-radio">
-									<input type="radio" name="delivery" id="NkzTo4iIT" value="3" hidden="hidden" class="rich-radio__input" />
-									<label for="NkzTo4iIT" class="rich-radio__label">
+									<input type="radio" name="delivery" id="NkfLk4G_a" value="3" hidden="hidden" class="rich-radio__input" />
+									<label for="NkfLk4G_a" class="rich-radio__label">
 										<div class="rich-radio-body">
 											<div class="rich-radio-body__content">
 												<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Самовывоз</span>
@@ -414,8 +420,8 @@
 					<div class="order-box__header order-box__header_normal">Способ оплаты</div>
 					<div class="order-box__body">
 						<div class="rich-radio">
-							<input type="radio" name="payment" id="VkXaiNoUT" value="0" hidden="hidden" class="rich-radio__input" />
-							<label for="VkXaiNoUT" class="rich-radio__label">
+							<input type="radio" name="payment" id="VkmL1EMO6" value="0" hidden="hidden" class="rich-radio__input" />
+							<label for="VkmL1EMO6" class="rich-radio__label">
 								<div class="rich-radio-body">
 									<div class="rich-radio-body__content">
 										<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Наличный расчёт при получении</span>
@@ -425,8 +431,8 @@
 							</label>
 						</div>
 						<div class="rich-radio">
-							<input type="radio" name="payment" id="VyVpjNiLa" value="1" hidden="hidden" class="rich-radio__input" />
-							<label for="VyVpjNiLa" class="rich-radio__label">
+							<input type="radio" name="payment" id="41481VfOa" value="1" hidden="hidden" class="rich-radio__input" />
+							<label for="41481VfOa" class="rich-radio__label">
 								<div class="rich-radio-body">
 									<div class="rich-radio-body__content">
 										<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Яндекс.Деньги</span>
@@ -436,8 +442,8 @@
 							</label>
 						</div>
 						<div class="rich-radio">
-							<input type="radio" name="payment" id="NkBasVjIp" value="2" hidden="hidden" class="rich-radio__input" />
-							<label for="NkBasVjIp" class="rich-radio__label">
+							<input type="radio" name="payment" id="EyB81Nzup" value="2" hidden="hidden" class="rich-radio__input" />
+							<label for="EyB81Nzup" class="rich-radio__label">
 								<div class="rich-radio-body">
 									<div class="rich-radio-body__content">
 										<div class="rich-radio-body__heading"><span class="rich-radio-body__title">QIWI Wallet</span>
@@ -447,8 +453,8 @@
 							</label>
 						</div>
 						<div class="rich-radio">
-							<input type="radio" name="payment" id="4yUaiNjIp" value="3" hidden="hidden" class="rich-radio__input" />
-							<label for="4yUaiNjIp" class="rich-radio__label">
+							<input type="radio" name="payment" id="NyUU1NzdT" value="3" hidden="hidden" class="rich-radio__input" />
+							<label for="NyUU1NzdT" class="rich-radio__label">
 								<div class="rich-radio-body">
 									<div class="rich-radio-body__content">
 										<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Банковский перевод</span>
@@ -458,8 +464,8 @@
 							</label>
 						</div>
 						<div class="rich-radio">
-							<input type="radio" name="payment" id="E1waiEoIp" value="4" hidden="hidden" class="rich-radio__input" />
-							<label for="E1waiEoIp" class="rich-radio__label">
+							<input type="radio" name="payment" id="4kvU14zO6" value="4" hidden="hidden" class="rich-radio__input" />
+							<label for="4kvU14zO6" class="rich-radio__label">
 								<div class="rich-radio-body">
 									<div class="rich-radio-body__content">
 										<div class="rich-radio-body__heading"><span class="rich-radio-body__title">Почтовый перевод</span>
@@ -543,8 +549,8 @@
 				</div>
 			</div>
 		</div>
-		<script src="assets/scripts/debug.js?1441641868822"></script>
-		<script src="assets/scripts/common.min.js?1441641868822"></script>
+		<script src="assets/scripts/debug.js?1441735877905"></script>
+		<script src="assets/scripts/common.min.js?1441735877905"></script>
 	</body>
 
 </html>
