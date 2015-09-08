@@ -22,7 +22,7 @@ mixin cart-item($data, $static)
             - if ($static)
                 =$data.quantity
             - else
-                +spinput($data.quantity).js-cart__item-quantity
+                +spinput($data.quantity).q
         .cart-item__summ= $data.price
             +ruble()
             - if (!$static)

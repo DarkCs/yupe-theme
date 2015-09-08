@@ -29,10 +29,19 @@ $(function () {
             subtotalValue = 0;
 
         items.each(function (i, el) {
-            var $price = $('.js-cart__item-price', el),
-                $quantity = $('.js-cart__item-quantity', el);
+            var $priceEl = $('.js-cart__item-price', el),
+                $quantityEl = $('.js-cart__item-quantity', el),
+                price = 0,
+                quantity = 0;
 
-            subtotalValue += $price.val() * $quantity.val();
+            if($quantityEl.length){
+                quantity = $quantityEl.val();
+            }
+            if($priceEl.length){
+                price = $priceEl.val();
+            }
+
+            subtotalValue += price * quantity;
 
         });
 
@@ -55,9 +64,10 @@ $(function () {
 
         this.delegate('.js-cart__item', 'click.cart', function (event) {
             var el = this,
-                parent = el.parentNode;
+                parent = el.parentNode,
+                $target = $(event.target);
 
-            if ($(event.target).parents('.js-cart__delete').length > 0) {
+            if ($target.closest('.js-cart__delete').length > 0) {
                 parent.removeChild(el);
                 $('.js-cart').trigger('update');
                 $(parent).trigger('change.cart');

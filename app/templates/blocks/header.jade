@@ -7,7 +7,7 @@
     .header__item.header-phone
         .header__phone 8 (456) 123-45-67
         a(href=jv0).header-phone-callback Заказать звонок
-    .header__item.header-cart
+    .header__item.header-cart.js-cart
         .header-cart__icon
             .badge.badge_light-blue 3
         .header-cart__text-wrap
@@ -18,6 +18,6 @@
             .header-cart__cost
                 .header-cart__cost-title Сумма:
                 .header-cart__cost-price
-                    span 1 345
+                    span.js-cart__subtotal 1 345
                     +ruble()
 
