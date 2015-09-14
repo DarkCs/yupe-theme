@@ -8,11 +8,6 @@ $block = '.top-menu'
 
     font-size 12px
 
-    &__link
-        display inline-block
-
-        text-transform: uppercase
-
     &__item
         position relative
         padding-left 10px
@@ -20,6 +15,11 @@ $block = '.top-menu'
 
         display inline-block
         height 100%
+
+        > a
+            display inline-block
+
+            text-transform: uppercase
 
         &:first-child
             padding-left 0
