@@ -34,10 +34,10 @@ $(function () {
                 price = 0,
                 quantity = 0;
 
-            if($quantityEl.length){
+            if ($quantityEl.length) {
                 quantity = $quantityEl.val();
             }
-            if($priceEl.length){
+            if ($priceEl.length) {
                 price = $priceEl.val();
             }
 
